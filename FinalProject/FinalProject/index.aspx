@@ -22,7 +22,7 @@
                     <li><a href="#">Hiking</a></li>
                     <li><a href="#">Apparel</a></li>
                     <li><a href="#">Customer Photos</a></li>
-                    <li id="signIn">
+                    <li id="signIn">  <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
                         <a href="#">Sign In</a>
                         <div id="signInContent">
                             <br />
@@ -35,7 +35,7 @@
                             <asp:HyperLink ID="lnkRegister" runat="server" Text="Register" NavigateUrl="#"></asp:HyperLink>
                             <asp:HyperLink ID="lnkForgot" runat="server" Text="Forgot Password" NavigateUrl="#"></asp:HyperLink>
                         </div>
-                    </li> <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
+                    </li>
                     <li><a href="#">Shopping Cart</a></li> 
                     <li><asp:TextBox runat="server" ID="txtSearchBar" Placeholder="Search" CssClass="searchBox"></asp:TextBox></li>
                 </ul>
