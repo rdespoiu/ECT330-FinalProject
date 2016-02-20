@@ -10,6 +10,7 @@ a {
     color: black;
 }
 
+
 a:hover {
     color: deepskyblue;
 }
@@ -26,19 +27,25 @@ a:hover {
 
 #menuBar {
     height: 5%;
-    width: 100%;
+    width: 97%;
     
 }
 
 #navContent {
-    display: inline-table;
+    /*display: inline-table;*/
+    text-align: justify;
+}
+
+#navContent:after {
+    content: '';
+    display: inline-block;
     width: 100%;
 }
 
 #navContent li {
-    display: table-cell;
+    display: inline-block;
     vertical-align: middle;
-    /* (100 / numItems) */
+    /*text-align: center;*/
 }
 
 .searchBox {
@@ -62,28 +69,159 @@ a:hover {
 }
 
 #featuredProducts {
-    background-color: #D5E5EB;
-    opacity: 0.7;
+    /*background-color: #D5E5EB;*/ 
     height: 85%;
     width: 95%;
     margin: auto;
     position: absolute;
     top: 5%; bottom: 0; left: 0; right: 0;
+    text-align: center;
 }
 
-#featured {
-    height: 50%;
-    background-image: url("/Assets/climber1.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
+#top {
+    display: inline-flex;
+    height: 70%;
+    width: 100%;
 }
 
-#featured a {
+#bottom {
+    display: inline-flex;
+    height: 25%;
+    width: 98%;
+    padding-top: 20px;
+
+
+
+}
+
+
+#leftFeatured {
+    height: 100%;
+    width: 50%;
+}
+
+.leftFeaturedImg {
+    height: 100%;
+}
+
+#leftFeaturedText {
     position: absolute;
-    height: 50%;
-    width: 34%;
     top: 0;
-    left: 0;
-    z-index: 10;
+    left: 2%;
+    color: white;
+}
 
+#leftFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#leftFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#rightFeatured {
+    height: 100%;
+    width: 50%;
+}
+
+.rightFeaturedImg {
+    height: 100%;
+}
+
+#rightFeaturedText {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    color: white;
+}
+
+#rightFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#rightFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#bottomOne {
+    height: 100%;
+    width: auto;
+    padding-right: 10px;
+}
+
+.bottomOneImg {
+    height: 100%;
+    width: 100%;
+}
+
+#bottomOneFeaturedText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 5px;
+}
+
+#bottomOneFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomOneFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#bottomTwo {
+    height: 100%;
+    width: auto;
+    padding-right: 10px;
+
+}
+
+.bottomTwoImg {
+    height: 100%;
+    width: 100%;
+}
+
+#bottomTwoFeaturedText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 5px;
+}
+
+#bottomTwoFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomTwoFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#bottomThree {
+    height: 100%;
+    width: auto;;
+}
+
+.bottomThreeImg {
+    height: 100%;
+    width: 100%;
+}
+
+#bottomThreeFeaturedText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 5px;
+}
+
+#bottomThreeFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomThreeFeaturedText a:hover {
+    color: deepskyblue;
 }

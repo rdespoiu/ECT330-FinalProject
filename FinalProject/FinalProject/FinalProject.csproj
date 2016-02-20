@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="index.aspx" />
     <Content Include="index.css" />
+    <Content Include="index.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
