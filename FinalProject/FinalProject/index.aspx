@@ -22,7 +22,20 @@
                     <li><a href="#">Hiking</a></li>
                     <li><a href="#">Apparel</a></li>
                     <li><a href="#">Customer Photos</a></li>
-                    <li><a href="#">Your Account</a></li> <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
+                    <li id="signIn">
+                        <a href="#">Sign In</a>
+                        <div id="signInContent">
+                            <br />
+                            <asp:TextBox ID="txtUsername" runat="server" Placeholder="Username" CssClass="signInForm"></asp:TextBox>
+                            <br />
+                            <asp:TextBox ID="txtPassword" runat="server" Placeholder="Password" TextMode="Password" CssClass="signInForm"></asp:TextBox>
+                            <br />
+                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="signInBtn"/>
+                            <br />
+                            <asp:HyperLink ID="lnkRegister" runat="server" Text="Register" NavigateUrl="#"></asp:HyperLink>
+                            <asp:HyperLink ID="lnkForgot" runat="server" Text="Forgot Password" NavigateUrl="#"></asp:HyperLink>
+                        </div>
+                    </li> <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
                     <li><a href="#">Shopping Cart</a></li> 
                     <li><asp:TextBox runat="server" ID="txtSearchBar" Placeholder="Search" CssClass="searchBox"></asp:TextBox></li>
                 </ul>
@@ -58,9 +71,6 @@
                     </div>
 
                 </div>
-
-
-
             </div>
         </div>
     </form>

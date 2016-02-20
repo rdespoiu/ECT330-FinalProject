@@ -100,6 +100,10 @@ a:hover {
     width: 50%;
 }
 
+#leftFeatured:hover {
+    cursor: pointer;
+}
+
 .leftFeaturedImg {
     height: 100%;
 }
@@ -123,6 +127,10 @@ a:hover {
 #rightFeatured {
     height: 100%;
     width: 50%;
+}
+
+#rightFeatured:hover {
+    cursor: pointer;
 }
 
 .rightFeaturedImg {
@@ -149,6 +157,10 @@ a:hover {
     height: 100%;
     width: auto;
     padding-right: 10px;
+}
+
+#bottomOne:hover {
+    cursor: pointer;
 }
 
 .bottomOneImg {
@@ -179,6 +191,10 @@ a:hover {
 
 }
 
+#bottomTwo:hover {
+    cursor: pointer;
+}
+
 .bottomTwoImg {
     height: 100%;
     width: 100%;
@@ -205,6 +221,10 @@ a:hover {
     width: auto;;
 }
 
+#bottomThree:hover {
+    cursor: pointer;
+}
+
 .bottomThreeImg {
     height: 100%;
     width: 100%;
@@ -224,4 +244,54 @@ a:hover {
 
 #bottomThreeFeaturedText a:hover {
     color: deepskyblue;
+}
+
+
+#signInContent {
+    visibility: hidden;
+    display: table-column;
+    position: absolute;
+    z-index: 20;
+    background-color: #EDEDED;
+    height:25%;
+    width: 25%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    top: 0; bottom: 0; right: 0; left: 0;
+}
+
+
+
+#signInContent a {
+    font-size: 10px;
+    display: block;
+}
+
+.signInForm {
+    border: none;
+    height: 30px;
+    width: 90%;
+    border-radius: 8px;
+    background-color: #D5E5EB;
+    background-position-y: 50%;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.signInForm:focus {
+    outline: none;
+    border-width: 0;
+}
+
+.signInBtn {
+    border: none;
+    width: 30%;
+    height: 15%;
+    background-color: slategray;
+    opacity: 1.0;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
 }
