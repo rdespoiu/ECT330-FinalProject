@@ -9,15 +9,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="index.js"></script>
 
-    <title>COMPANY NAME HERE</title>
+    <title>Above Treeline</title>
 </head>
 <body>
     <form id="form1" runat="server">
         <div id="mainContent">
             <div id="menuBar">
                 <!--For mockup purposes-->
+                <img id="logo" src="/Assets/workingLogo.png" />
                 <ul id="navContent">
-                    <li>LOGO HERE</li>
                     <li><a href="#">Climbing</a></li>
                     <li><a href="#">Hiking</a></li>
                     <li><a href="#">Apparel</a></li>

@@ -70,6 +70,9 @@
     <Content Include="index.aspx" />
     <Content Include="index.css" />
     <Content Include="index.js" />
+    <Content Include="Master Page\master.aspx" />
+    <Content Include="Master Page\master.css" />
+    <Content Include="Master Page\master.js" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -92,6 +95,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master Page\master.aspx.cs">
+      <DependentUpon>master.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master Page\master.aspx.designer.cs">
+      <DependentUpon>master.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

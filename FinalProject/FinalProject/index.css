@@ -27,7 +27,9 @@ a:hover {
 
 #menuBar {
     height: 5%;
-    width: 97%;
+    width: 85%;
+    margin-left: 11%;
+
     
 }
 
@@ -48,10 +50,23 @@ a:hover {
     /*text-align: center;*/
 }
 
+#logo {
+    height: 8%;
+    position: absolute;
+    margin: auto;
+    top: 1%; left: 4%;
+}
+
+
 .searchBox {
     border: none;
-    height: 30px;
-    width: 250px;
+    /*height: 30px;
+    width: 250px;*/
+
+    height: 100%;
+    width: 100%;
+    padding: 5% 5%;
+
     opacity: 0.8;
     border-radius: 8px;
     background-color: #D5E5EB;
@@ -106,6 +121,7 @@ a:hover {
 
 .leftFeaturedImg {
     height: 100%;
+    width: 96%;
 }
 
 #leftFeaturedText {
@@ -135,6 +151,7 @@ a:hover {
 
 .rightFeaturedImg {
     height: 100%;
+    width: 96%;
 }
 
 #rightFeaturedText {
@@ -295,3 +312,4 @@ a:hover {
     border-radius: 5px;
     font-size: 15px;
 }
+
