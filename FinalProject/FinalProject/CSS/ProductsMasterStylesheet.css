@@ -1,0 +1,233 @@
+﻿::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: deepskyblue;
+}
+
+body {
+    background-image: url("/Assets/bg.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+a:hover {
+    color: deepskyblue;
+}
+
+
+
+#mainContent {
+    background-color: #FAFAFA;
+    opacity: 0.9;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+
+/*NAV BAR*/
+
+#menuBar {
+    height: 5%;
+    width: 85%;
+    margin-left: 11%;
+
+    
+}
+
+#navContent {
+    /*display: inline-table;*/
+    text-align: justify;
+}
+
+#navContent:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+#navContent li {
+    display: inline-block;
+    vertical-align: middle;
+    /*text-align: center;*/
+}
+
+#logo {
+    height: 8%;
+    position: absolute;
+    margin: auto;
+    top: 1%; left: 4%;
+}
+
+
+.searchBox {
+    border: none;
+    /*height: 30px;
+    width: 250px;*/
+
+    height: 100%;
+    width: 100%;
+    padding: 5% 5%;
+
+    opacity: 0.8;
+    border-radius: 8px;
+    background-color: #D5E5EB;
+    background-image: url("/Assets/searchicon.png");
+    background-position-y: 50%;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.searchBox:focus {
+    border-width: 0px;
+    outline: none;
+
+}
+
+#signInContent a {
+    font-size: 10px;
+    display: block;
+}
+
+.signInForm {
+    border: none;
+    height: 30px;
+    width: 90%;
+    border-radius: 8px;
+    background-color: #D5E5EB;
+    background-position-y: 50%;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.signInForm:focus {
+    outline: none;
+    border-width: 0;
+}
+
+.signInBtn {
+    border: none;
+    width: 30%;
+    height: 15%;
+    background-color: slategray;
+    opacity: 1.0;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#signInContent {
+    visibility: hidden;
+    display: table-column;
+    position: absolute;
+    z-index: 20;
+    background-color: #EDEDED;
+    height:25%;
+    width: 25%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    top: 0; bottom: 0; right: 0; left: 0;
+}
+
+/*ACTUAL CONTENT*/
+
+#content {
+    height: 85%;
+    width: 95%;
+    margin: auto;
+    position: absolute;
+    top: 5%; bottom: 0; left: 0; right: 0;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+#pageName {
+    width: 100%;
+    height: 5%;
+    vertical-align: middle;
+    text-align: left;
+    font-size: 30px;
+    color: deepskyblue;
+}
+
+#pageContent {
+    width: 100%;
+    height: 90%;
+    display: inline-flex;
+}
+
+#leftOptions {
+    height: 100%;
+    width: 15%;
+    display: block;
+    text-align: left;
+    overflow-y: scroll;
+    
+
+}
+
+#rightDetail {
+    height: 100%;
+    width: 85%;
+    overflow-y: scroll;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+#rightDetail img {
+    height: 100px;
+    width: 100px;
+}
+
+#rightDetail button {
+    border: none;
+    background-color: red;
+    display: none;
+}
+
+.addToCartButton {
+    opacity: 0.7;
+    border: none;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    color: black;
+    font-size: 20px;
+    height: 50%;
+    width: 50%;
+}
+
+.addToCartButton:hover {
+    opacity: 1.0;
+}
+
+
+
+
+#footer {
+    color: white;
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: 100%; bottom: 0; left: 0; right: 0;
+    text-align: center;
+}

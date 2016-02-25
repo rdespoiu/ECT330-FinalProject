@@ -1,0 +1,328 @@
+﻿body {
+    background-image: url("/Assets/bg.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+a:hover {
+    color: deepskyblue;
+}
+
+#mainContent {
+    background-color: #FAFAFA;
+    opacity: 0.9;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+#menuBar {
+    height: 5%;
+    width: 85%;
+    margin-left: 11%;
+
+    
+}
+
+#navContent {
+    /*display: inline-table;*/
+    text-align: justify;
+}
+
+#navContent:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+
+#navContent li {
+    display: inline-block;
+    vertical-align: middle;
+    /*text-align: center;*/
+}
+
+#logo {
+    height: 8%;
+    position: absolute;
+    margin: auto;
+    top: 1%; left: 4%;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+
+.searchBox {
+    border: none;
+    /*height: 30px;
+    width: 250px;*/
+
+    height: 100%;
+    width: 100%;
+    padding: 5% 5%;
+
+    opacity: 0.8;
+    border-radius: 8px;
+    background-color: #D5E5EB;
+    background-image: url("/Assets/searchicon.png");
+    background-position-y: 50%;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.searchBox:focus {
+    border-width: 0px;
+    outline: none;
+
+}
+
+#featuredProducts {
+    /*background-color: #D5E5EB;*/ 
+    height: 85%;
+    width: 95%;
+    margin: auto;
+    position: absolute;
+    top: 5%; bottom: 0; left: 0; right: 0;
+    text-align: center;
+}
+
+#top {
+    display: inline-flex;
+    height: 70%;
+    width: 100%;
+}
+
+#bottom {
+    display: inline-flex;
+    height: 25%;
+    width: 98%;
+    padding-top: 20px;
+
+
+
+}
+
+
+#leftFeatured {
+    height: 100%;
+    width: 50%;
+}
+
+#leftFeatured:hover {
+    cursor: pointer;
+}
+
+.leftFeaturedImg {
+    height: 100%;
+    width: 96%;
+}
+
+#leftFeaturedText {
+    position: absolute;
+    top: 0;
+    left: 2%;
+    color: white;
+}
+
+#leftFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#leftFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#rightFeatured {
+    height: 100%;
+    width: 50%;
+}
+
+#rightFeatured:hover {
+    cursor: pointer;
+}
+
+.rightFeaturedImg {
+    height: 100%;
+    width: 96%;
+}
+
+#rightFeaturedText {
+    position: absolute;
+    top: 0;
+    right: 2%;
+    color: white;
+}
+
+#rightFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#rightFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#bottomOne {
+    height: 100%;
+    width: auto;
+    padding-right: 10px;
+}
+
+#bottomOne:hover {
+    cursor: pointer;
+}
+
+.bottomOneImg {
+    height: 100%;
+    width: 100%;
+}
+
+#bottomOneFeaturedText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 5px;
+}
+
+#bottomOneFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomOneFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#bottomTwo {
+    height: 100%;
+    width: auto;
+    padding-right: 10px;
+
+}
+
+#bottomTwo:hover {
+    cursor: pointer;
+}
+
+.bottomTwoImg {
+    height: 100%;
+    width: 100%;
+}
+
+#bottomTwoFeaturedText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 5px;
+}
+
+#bottomTwoFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomTwoFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+#bottomThree {
+    height: 100%;
+    width: auto;;
+}
+
+#bottomThree:hover {
+    cursor: pointer;
+}
+
+.bottomThreeImg {
+    height: 100%;
+    width: 100%;
+}
+
+#bottomThreeFeaturedText {
+    position: absolute;
+    bottom: 0;
+    color: white;
+    padding: 5px;
+}
+
+#bottomThreeFeaturedText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomThreeFeaturedText a:hover {
+    color: deepskyblue;
+}
+
+
+#signInContent {
+    visibility: hidden;
+    display: table-column;
+    position: absolute;
+    z-index: 20;
+    background-color: #EDEDED;
+    height:25%;
+    width: 25%;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    top: 0; bottom: 0; right: 0; left: 0;
+}
+
+
+
+#signInContent a {
+    font-size: 10px;
+    display: block;
+}
+
+.signInForm {
+    border: none;
+    height: 30px;
+    width: 90%;
+    border-radius: 8px;
+    background-color: #D5E5EB;
+    background-position-y: 50%;
+    background-size: 17px;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.signInForm:focus {
+    outline: none;
+    border-width: 0;
+}
+
+.signInBtn {
+    border: none;
+    width: 30%;
+    height: 15%;
+    background-color: slategray;
+    opacity: 1.0;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+#footer {
+    color: white;
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: 100%; bottom: 0; left: 0; right: 0;
+    text-align: center;
+}

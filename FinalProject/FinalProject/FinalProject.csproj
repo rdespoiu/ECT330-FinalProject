@@ -44,6 +44,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -67,13 +75,20 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="apparel.aspx" />
+    <Content Include="climbing.aspx" />
+    <Content Include="CSS\MasterStylesheet.css" />
+    <Content Include="CSS\ActionsMasterStylesheet.css" />
+    <Content Include="CSS\ProductsMasterStylesheet.css" />
+    <Content Include="hiking.aspx" />
     <Content Include="index.aspx" />
-    <Content Include="index.css" />
-    <Content Include="index.js" />
-    <Content Include="Master Page\master.aspx" />
-    <Content Include="Master Page\master.css" />
-    <Content Include="Master Page\master.js" />
+    <Content Include="CSS\index.css" />
+    <Content Include="JS\index.js" />
     <Content Include="packages.config" />
+    <Content Include="Master.Master" />
+    <Content Include="ProductsMaster.Master" />
+    <Content Include="ActionsMaster.Master" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,8 +101,36 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionsMaster.Master.cs">
+      <DependentUpon>ActionsMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ActionsMaster.Master.designer.cs">
+      <DependentUpon>ActionsMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="apparel.aspx.cs">
+      <DependentUpon>apparel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="apparel.aspx.designer.cs">
+      <DependentUpon>apparel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="climbing.aspx.cs">
+      <DependentUpon>climbing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="climbing.aspx.designer.cs">
+      <DependentUpon>climbing.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="hiking.aspx.cs">
+      <DependentUpon>hiking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="hiking.aspx.designer.cs">
+      <DependentUpon>hiking.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -96,14 +139,28 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Master Page\master.aspx.cs">
-      <DependentUpon>master.aspx</DependentUpon>
+    <Compile Include="Master.Master.cs">
+      <DependentUpon>Master.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Master Page\master.aspx.designer.cs">
-      <DependentUpon>master.aspx</DependentUpon>
+    <Compile Include="Master.Master.designer.cs">
+      <DependentUpon>Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsMaster.Master.cs">
+      <DependentUpon>ProductsMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsMaster.Master.designer.cs">
+      <DependentUpon>ProductsMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

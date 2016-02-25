@@ -18,3 +18,7 @@
 \\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
 \\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.dll
 \\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+\\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.dll
+\\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.SqlServer.dll
+\\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.xml
+\\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.SqlServer.xml

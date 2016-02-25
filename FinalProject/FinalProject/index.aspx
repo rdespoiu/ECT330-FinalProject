@@ -4,10 +4,10 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" type="text/css" href="index.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Lora|Josefin+Sans|Source+Sans+Pro|Open+Sans|Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/CSS/index.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Lora|Josefin+Sans|Source+Sans+Pro|Open+Sans|Roboto' rel='stylesheet' type='text/css'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="/JS/index.js"></script>
 
     <title>Above Treeline</title>
 </head>
@@ -18,10 +18,10 @@
                 <!--For mockup purposes-->
                 <img id="logo" src="/Assets/workingLogo.png" />
                 <ul id="navContent">
-                    <li><a href="#">Climbing</a></li>
-                    <li><a href="#">Hiking</a></li>
-                    <li><a href="#">Apparel</a></li>
-                    <li><a href="#">Customer Photos</a></li>
+                    <li><a href="index.aspx">Home</a></li>
+                    <li><a href="climbing.aspx">Climbing</a></li>
+                    <li><a href="hiking.aspx">Hiking</a></li>
+                    <li><a href="apparel.aspx">Apparel</a></li>
                     <li id="signIn">  <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
                         <a href="#">Sign In</a>
                         <div id="signInContent">
@@ -72,7 +72,15 @@
 
                 </div>
             </div>
+
+            <footer id="footer">
+            <p>Footer information will go here</p>
+            </footer>
+
         </div>
+
+        
+
     </form>
 </body>
 </html>
