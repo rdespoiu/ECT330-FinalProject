@@ -20,6 +20,10 @@
         window.location.href = "#"; /*Will redirect to the product's page*/
     });
 
+    $("#logo").click(function (event) {
+        window.location.href = "/index.aspx";
+    });
+
     $("#signIn").click(function() {
         $("#signInContent").css("visibility", "visible");
     });

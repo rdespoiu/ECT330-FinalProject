@@ -1,4 +1,18 @@
-﻿body {
+﻿::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar:hover {
+    width: 10px;
+    background: red;
+}
+
+::-webkit-scrollbar-thumb {
+    background: deepskyblue;
+}
+
+body {
     background-image: url("/Assets/bg.jpg");
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
@@ -138,32 +152,89 @@ a:hover {
 /*ACTUAL CONTENT*/
 
 #content {
-    background-color: black;
     height: 85%;
     width: 95%;
     margin: auto;
     position: absolute;
     top: 5%; bottom: 0; left: 0; right: 0;
     text-align: center;
+
 }
 
 #pageName {
     width: 100%;
-    height: 10%;
-    background-color: red;
+    height: 5%;
     vertical-align: middle;
     text-align: left;
     font-size: 30px;
+    color: deepskyblue;
 }
 
 #pageContent {
     width: 100%;
     height: 90%;
+    display: block;
+    margin-top: 1%;
+}
+
+#top {
+    width: 100%;
+    height: 85%;
+    overflow-y: scroll;
+}
+
+#top img {
+    height: 100px;
+    width: 100px;
+}
+
+#bottom {
+    width: 100%;
+    height: 15%;
+    display: inline-flex;
+    padding-top: 3%;
+    border-top: solid;
+    border-width: 1px;
+    vertical-align: middle;
+}
+
+#bottomLeft {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#bottomRight {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.actionButton {
+    opacity: 0.7;
+    border: none;
+    border-radius: 5px;
     background-color: deepskyblue;
+    color: black;
+    font-size: 20px;
+    height: 40%;
+    width: 30%;
+}
+
+.actionButton:hover {
+    opacity: 1.0;
 }
 
 
-
+.cartQuantity {
+    font-size: 15px;
+}
 
 
 #footer {

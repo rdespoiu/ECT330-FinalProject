@@ -1,4 +1,13 @@
-﻿body {
+﻿::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: deepskyblue;
+}
+
+body {
     background-image: url("/Assets/bg.jpg");
     background-size: cover;
     font-family: 'Open Sans', sans-serif;
@@ -138,30 +147,77 @@ a:hover {
 /*ACTUAL CONTENT*/
 
 #content {
-    background-color: black;
     height: 85%;
     width: 95%;
     margin: auto;
     position: absolute;
     top: 5%; bottom: 0; left: 0; right: 0;
     text-align: center;
+    overflow: hidden;
+
 }
 
 #pageName {
     width: 100%;
-    height: 10%;
-    background-color: red;
+    height: 5%;
     vertical-align: middle;
     text-align: left;
     font-size: 30px;
+    color: deepskyblue;
 }
 
 #pageContent {
     width: 100%;
     height: 90%;
-    background-color: deepskyblue;
+    margin-top: 1%;
+    display: inline-flex;
 }
 
+#left {
+    width: 40%;
+    height: 100%;
+}
+
+#left img {
+    width: 100%;
+}
+
+#right {
+    width: 60%;
+    height: 100%;
+    text-align: left;
+}
+
+#right select {
+    border-width: 1px;
+    height: 10%;
+    width: 25%;
+    font-size: 20px;
+}
+
+#right select:focus {
+    outline: none;
+}
+
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.addToCartButton {
+    opacity: 0.7;
+    border: none;
+    border-radius: 5px;
+    background-color: deepskyblue;
+    color: black;
+    font-size: 20px;
+    height: 10%;
+    width: 25%;
+}
+
+.addToCartButton:hover {
+    opacity: 1.0;
+}
 
 
 

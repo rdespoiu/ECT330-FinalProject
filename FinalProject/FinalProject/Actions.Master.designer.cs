@@ -10,7 +10,7 @@
 namespace FinalProject {
     
     
-    public partial class Master {
+    public partial class Actions {
         
         /// <summary>
         /// head control.
@@ -94,12 +94,21 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphPageName;
         
         /// <summary>
-        /// cphPageContent control.
+        /// cphTop control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphPageContent;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphTop;
+        
+        /// <summary>
+        /// cphBottom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphBottom;
     }
 }

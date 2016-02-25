@@ -76,19 +76,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apparel.aspx" />
+    <Content Include="cart.aspx" />
     <Content Include="climbing.aspx" />
-    <Content Include="CSS\MasterStylesheet.css" />
     <Content Include="CSS\ActionsMasterStylesheet.css" />
+    <Content Include="CSS\ProductDetailMasterStylesheet.css" />
     <Content Include="CSS\ProductsMasterStylesheet.css" />
     <Content Include="hiking.aspx" />
     <Content Include="index.aspx" />
     <Content Include="CSS\index.css" />
     <Content Include="JS\index.js" />
     <Content Include="packages.config" />
-    <Content Include="Master.Master" />
+    <Content Include="product.aspx" />
     <Content Include="ProductsMaster.Master" />
-    <Content Include="ActionsMaster.Master" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="ProductDetail.Master" />
+    <Content Include="Actions.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -101,12 +102,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActionsMaster.Master.cs">
-      <DependentUpon>ActionsMaster.Master</DependentUpon>
+    <Compile Include="Actions.Master.cs">
+      <DependentUpon>Actions.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ActionsMaster.Master.designer.cs">
-      <DependentUpon>ActionsMaster.Master</DependentUpon>
+    <Compile Include="Actions.Master.designer.cs">
+      <DependentUpon>Actions.Master</DependentUpon>
     </Compile>
     <Compile Include="apparel.aspx.cs">
       <DependentUpon>apparel.aspx</DependentUpon>
@@ -114,6 +115,13 @@
     </Compile>
     <Compile Include="apparel.aspx.designer.cs">
       <DependentUpon>apparel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
     </Compile>
     <Compile Include="climbing.aspx.cs">
       <DependentUpon>climbing.aspx</DependentUpon>
@@ -139,12 +147,19 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Master.Master.cs">
-      <DependentUpon>Master.Master</DependentUpon>
+    <Compile Include="product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Master.Master.designer.cs">
-      <DependentUpon>Master.Master</DependentUpon>
+    <Compile Include="product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetail.Master.cs">
+      <DependentUpon>ProductDetail.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductDetail.Master.designer.cs">
+      <DependentUpon>ProductDetail.Master</DependentUpon>
     </Compile>
     <Compile Include="ProductsMaster.Master.cs">
       <DependentUpon>ProductsMaster.Master</DependentUpon>
@@ -154,13 +169,6 @@
       <DependentUpon>ProductsMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

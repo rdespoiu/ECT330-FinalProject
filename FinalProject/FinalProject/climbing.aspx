@@ -58,8 +58,8 @@
     <asp:Table ID="tblProducts" runat="server">
         <asp:TableRow>
             <asp:TableCell><img src="/Assets/testshoe.jpg" /></asp:TableCell>
-            <asp:TableCell><a href="#">Sportiva TC Pro Rock Shoes</a></asp:TableCell>
-            <asp:TableCell>$180.00</asp:TableCell>
+            <asp:TableCell><a href="product.aspx">Sportiva TC Pro Rock Shoes</a></asp:TableCell>
+            <asp:TableCell><a href="cart.aspx">$180.00</a></asp:TableCell>
             <asp:TableCell><asp:Button ID="btnAdd" runat="server" Text="Add To Cart" CssClass="addToCartButton" /></asp:TableCell>
         </asp:TableRow>
     </asp:Table>

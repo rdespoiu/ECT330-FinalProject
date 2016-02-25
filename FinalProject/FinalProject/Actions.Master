@@ -1,11 +1,11 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ProductsMaster.master.cs" Inherits="FinalProject.ProductsMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Actions.master.cs" Inherits="FinalProject.Actions" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Above Treeline</title>
-    <link rel="stylesheet" type="text/css" href="/CSS/ProductsMasterStylesheet.css"/>
+    <link rel="stylesheet" type="text/css" href="/CSS/ActionsMasterStylesheet.css"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Lora|Josefin+Sans|Source+Sans+Pro|Open+Sans|Roboto' rel='stylesheet' type='text/css'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script type="text/javascript" src="/JS/index.js"></script>
@@ -24,7 +24,7 @@
                     <li><a href="climbing.aspx">Climbing</a></li>
                     <li><a href="hiking.aspx">Hiking</a></li>
                     <li><a href="apparel.aspx">Apparel</a></li>
-                    <li id="signIn">  <!--This can be changed to an ASP method so that it shows your name or something when you're logged in //RID-->
+                    <li id="signIn">  <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
                         <a href="#">Sign In</a>
                         <div id="signInContent">
                             <br />
@@ -51,30 +51,30 @@
                 </div>
 
                 <div id="pageContent">
-                    <div id="leftOptions">
-                        <!--Sort by categories/price //RID-->
-                        <h4>Categories</h4>
-                        <asp:ContentPlaceHolder ID="cphCategories" runat="server">
+                    
+                    <div id="top">
+                        <!--This can be used for main content like cart summary, checkout summary, credit card info, etc //RID-->
+                        <asp:ContentPlaceHolder ID="cphTop" runat="server">
+                            
 
                         </asp:ContentPlaceHolder>
-
-                        <h4>Price</h4>
-                        <asp:ContentPlaceHolder ID="cphPrice" runat="server">
+                    </div>
+                    
+                    <div id="bottom">
+                        <!--This can be used for buttons like Checkout, Continue, etc etc. //RID-->
+                        <asp:ContentPlaceHolder ID="cphBottom" runat="server">
 
                         </asp:ContentPlaceHolder>
                     </div>
 
-                    <div id="rightDetail">
-                        <asp:ContentPlaceHolder ID="cphRightDetail" runat="server">
-                            <!--This will hold a scrollable list (or table) of available products in the category or subcategory chosen. //RID-->
-                        </asp:ContentPlaceHolder>
-                    </div>
                 </div>
             </div>
+
 
             <footer id="footer">
             <p>Footer information will go here</p>
             </footer>
+
 
         </div>
     </form>
