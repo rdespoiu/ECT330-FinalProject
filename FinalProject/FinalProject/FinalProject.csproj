@@ -86,6 +86,7 @@
     <Content Include="CSS\index.css" />
     <Content Include="JS\index.js" />
     <Content Include="packages.config" />
+    <Content Include="PopulateStoreData.aspx" />
     <Content Include="product.aspx" />
     <Content Include="ProductsMaster.Master" />
     <Content Include="ProductDetail.Master" />
@@ -147,6 +148,19 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\OrderItem.cs" />
+    <Compile Include="Models\Orders.cs" />
+    <Compile Include="Models\Products.cs" />
+    <Compile Include="Models\StoreContent.cs" />
+    <Compile Include="PopulateStoreData.aspx.cs">
+      <DependentUpon>PopulateStoreData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopulateStoreData.aspx.designer.cs">
+      <DependentUpon>PopulateStoreData.aspx</DependentUpon>
+    </Compile>
     <Compile Include="product.aspx.cs">
       <DependentUpon>product.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -173,7 +187,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
