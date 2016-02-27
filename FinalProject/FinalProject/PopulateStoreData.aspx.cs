@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -13,18 +14,18 @@ namespace FinalProject
         {
             using (StoreContent content = new StoreContent())
             {
-                categories c = new categories();
+                Category c = new Category();
                 c.Id = 00;
                 c.Description = "Climbing";
                 content.Category.Add(c);
 
-                c = new categories();
+                c = new Category();
                 c.Id = 01;
                 c.Description = "Hiking";
                 content.Category.Add(c);
 
 
-                c = new categories();
+                c = new Category();
                 c.Id = 11;
                 c.Description = "Apparel";
                 content.Category.Add(c);
