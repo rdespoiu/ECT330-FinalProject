@@ -35,18 +35,20 @@ namespace FinalProject
                 p.ProductName = "Climbing Shoes";
                 p.ProductDescription = "Shoes that won't weigh you down.";
                 p.UnitPrice = 119.99;
-                p.Stock = 49;
-                p.Featured = false;
                 p.CategoryID = 00;
+                p.Featured = false;
+                p.image = "/images/climbing-shoes.jpg";
+                p.Stock = 49;
                 content.Products.Add(p);
 
                 p = new Products();
                 p.ProductName = "Climding Harness";
                 p.ProductDescription = "Hang on";
                 p.UnitPrice = 79.99;
+                p.CategoryID = 00;
                 p.Featured = false;
                 p.Stock = 28;
-                p.CategoryID = 00;
+                p.image = "/images/climbing-harness.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -56,6 +58,7 @@ namespace FinalProject
                 p.CategoryID = 00;
                 p.Featured = false;
                 p.Stock = 150;
+                p.image = "/images/climbing-carabiner.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -65,6 +68,7 @@ namespace FinalProject
                 p.CategoryID = 00;
                 p.Featured = false;
                 p.Stock = 100;
+                p.image = "/images/climbing-belaydevice.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -74,6 +78,7 @@ namespace FinalProject
                 p.CategoryID = 00;
                 p.Featured = false;
                 p.Stock = 25;
+                p.image = "/images/climbing-quickdraw";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -83,6 +88,7 @@ namespace FinalProject
                 p.CategoryID = 00;
                 p.Featured = false;
                 p.Stock = 200;
+                p.image = "/images/climbing-rope.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -92,6 +98,7 @@ namespace FinalProject
                 p.CategoryID = 00;
                 p.Featured = false;
                 p.Stock = 300;
+                p.image = "/images/climbing-cams.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -101,6 +108,7 @@ namespace FinalProject
                 p.CategoryID = 01;
                 p.Featured = false;
                 p.Stock = 115;
+                p.image = "/images/hiking-boots.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -110,6 +118,7 @@ namespace FinalProject
                 p.CategoryID = 01;
                 p.Featured = false;
                 p.Stock = 35;
+                p.image = "/images/hiking-pack.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -119,6 +128,7 @@ namespace FinalProject
                 p.CategoryID = 01;
                 p.Featured = false;
                 p.Stock = 60;
+                p.image = "/images/hiking-sleepingbag.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
@@ -128,6 +138,7 @@ namespace FinalProject
                 p.CategoryID = 11;
                 p.Featured = false;
                 p.Stock = 180;
+                p.image = "/images/apparel-jacket.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
