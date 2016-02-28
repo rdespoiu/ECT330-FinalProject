@@ -11,7 +11,11 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LoggedInId"] != null)
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert",
+                "alert('You are logged in as " + Session["FirstName"] + " " + Session["LastName"] + "');", true);
+            }
         }
     }
 }
