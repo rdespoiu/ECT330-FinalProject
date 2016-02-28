@@ -30,7 +30,7 @@
                             <br />
                             <asp:TextBox ID="txtPassword" runat="server" Placeholder="Password" TextMode="Password" CssClass="signInForm"></asp:TextBox>
                             <br />
-                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="signInBtn"/>
+                            <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="signInBtn" OnClick="btnSignIn_Click"/>
                             <br />
                             <asp:HyperLink ID="lnkRegister" runat="server" Text="Register" NavigateUrl="#"></asp:HyperLink>
                             <asp:HyperLink ID="lnkForgot" runat="server" Text="Forgot Password" NavigateUrl="#"></asp:HyperLink>
