@@ -22,3 +22,27 @@
 \\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
 \\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.dll
 \\psf\Home\Documents\School\Winter 2016\Web Application Development\Final Project\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\csc.exe
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\vbc.exe
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\VBCSCompiler.exe
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\FinalProject.dll.config
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\FinalProject.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\FinalProject.pdb
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.SqlServer.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.xml
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\EntityFramework.SqlServer.xml
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.pdb

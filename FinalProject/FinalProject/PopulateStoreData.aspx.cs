@@ -1,6 +1,7 @@
 ﻿using FinalProject.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,8 +13,11 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             using (StoreContent content = new StoreContent())
             {
+                ClearData(content);
+
                 Category c = new Category();
                 c.Id = 00;
                 c.Description = "Climbing";
@@ -42,7 +46,7 @@ namespace FinalProject
                 content.Products.Add(p);
 
                 p = new Products();
-                p.ProductName = "Climding Harness";
+                p.ProductName = "Climbing Harness";
                 p.ProductDescription = "Hang on";
                 p.UnitPrice = 79.99;
                 p.CategoryID = 00;
@@ -159,6 +163,24 @@ namespace FinalProject
                 p.Stock = 360;
                 content.Products.Add(p);
 
+                content.SaveChanges();
+            }
+        }
+        public void ClearData(StoreContent content)
+        {
+            List<string> tablenames = content.Database.SqlQuery<string>("SELECT Table_Name FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND TABLE_NAME NOT LIKE '%Migration%'").ToList();
+            for (int i = 0; tablenames.Count > 0; i++)
+            {
+                try
+                {
+                    content.Database.ExecuteSqlCommand(string.Format("DELETE FROM {0}", tablenames.ElementAt(i % tablenames.Count)));
+                    tablenames.RemoveAt(i % tablenames.Count);
+                    i = 0;
+                }
+                catch
+                {
+
+                }
                 content.SaveChanges();
             }
         }
