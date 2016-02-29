@@ -23,8 +23,19 @@
                     <li><a href="hiking.aspx">Hiking</a></li>
                     <li><a href="apparel.aspx">Apparel</a></li>
                     <li id="signIn">  <!--This can be changed to an ASP method so that it shows your name or something when you're logged in -->
-                        <a href="#">Sign In</a>
+                        <a href="#"><asp:Label ID="lblSignInUsername" runat="server" Text="Sign In &#x25BC;"></asp:Label></a>
                         <div id="signInContent">
+                            <asp:Panel ID="pnlSignIn" runat="server">
+
+                            </asp:Panel>
+
+                            <asp:Panel ID="pnlSignedInOptions" runat="server">
+
+                            </asp:Panel>
+
+                            <asp:Panel ID="pnlInvalidCredentials" runat="server">
+
+                            </asp:Panel>
                             <br />
                             <asp:TextBox ID="txtUsername" runat="server" Placeholder="Username" CssClass="signInForm"></asp:TextBox>
                             <br />
