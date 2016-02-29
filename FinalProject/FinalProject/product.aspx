@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphProductImage" runat="server">
     <!--Product image will go here. Should use an ASP image method and ppopulate it from DB tables. Current image is for testing only //RID-->
-    <asp:Image ID="imgProduct" runat="server" />
+    <asp:Image ID="imgProduct" runat="server"/>
 </asp:Content>
 
 

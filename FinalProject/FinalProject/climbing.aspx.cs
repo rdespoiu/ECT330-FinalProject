@@ -14,6 +14,7 @@ namespace FinalProject
         {
             if (Session["LoggedInId"] != null)
             {
+
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert",
                 "alert('You are logged in as " + Session["FirstName"] + " " + Session["LastName"] + "');", true);
             }
@@ -36,6 +37,8 @@ namespace FinalProject
 
                 foreach (Products product in products)
                 {
+                    String productId = product.Id.ToString();
+
                     TableRow row = new TableRow();
                     TableCell cell;
 
