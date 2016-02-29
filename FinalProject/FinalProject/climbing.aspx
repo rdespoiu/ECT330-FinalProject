@@ -55,12 +55,11 @@
     <!--Column order: Image, Product Name, Price, AddToCart-->
     <!--Header cells are not necessary-->
     <!--DELETE INITIAL ROW, THIS IS FOR TESTING PURPOSES ONLY-->
-    <asp:Table ID="tblProducts" runat="server">
-        <asp:TableRow>
-            <asp:TableCell><img src="/Assets/testshoe.jpg" /></asp:TableCell>
+    <!--<asp:TableCell><img src="/Assets/testshoe.jpg" /></asp:TableCell>
             <asp:TableCell><a href="product.aspx">Sportiva TC Pro Rock Shoes</a></asp:TableCell>
             <asp:TableCell><a href="cart.aspx">$180.00</a></asp:TableCell>
-            <asp:TableCell><asp:Button ID="btnAdd" runat="server" Text="Add To Cart" CssClass="addToCartButton" /></asp:TableCell>
-        </asp:TableRow>
+            <asp:TableCell><asp:Button ID="btnAdd" runat="server" Text="Add To Cart" CssClass="addToCartButton" /></asp:TableCell>-->
+    <asp:Table ID="tblProducts" runat="server">
+        
     </asp:Table>
 </asp:Content>

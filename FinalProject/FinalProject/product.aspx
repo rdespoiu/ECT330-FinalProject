@@ -7,7 +7,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphProductImage" runat="server">
     <!--Product image will go here. Should use an ASP image method and ppopulate it from DB tables. Current image is for testing only //RID-->
-    <img src="/Assets/testshoe.jpg" />
+    <asp:Image ID="imgProduct" runat="server" />
 </asp:Content>
 
 
@@ -32,7 +32,7 @@
 <asp:Content ID="Content6" ContentPlaceHolderID="cphSize" runat="server">
     <!--Size options will go here. We may need a size table //RID-->
     <asp:DropDownList ID="ddlSize" runat="server">
-        <asp:ListItem Text="Choose a size"></asp:ListItem>
+        <asp:ListItem Text="One size fits all!"></asp:ListItem>
     </asp:DropDownList>
 </asp:Content>
 

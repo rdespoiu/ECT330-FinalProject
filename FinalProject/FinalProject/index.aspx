@@ -36,7 +36,7 @@
                             <asp:HyperLink ID="lnkForgot" runat="server" Text="Forgot Password" NavigateUrl="#"></asp:HyperLink>
                         </div>
                     </li>
-                    <li><a href="#">Shopping Cart</a></li> 
+                    <li><a href="cart.aspx">Shopping Cart</a></li> 
                     <li><asp:TextBox runat="server" ID="txtSearchBar" Placeholder="Search" CssClass="searchBox"></asp:TextBox></li>
                 </ul>
             </div>
