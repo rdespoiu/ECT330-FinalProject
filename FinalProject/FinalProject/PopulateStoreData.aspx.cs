@@ -57,7 +57,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Climbing Carabiner";
-                p.ProductDescription = "attach yourself to whats important";
+                p.ProductDescription = "Attach yourself to what's important";
                 p.UnitPrice = 19.99;
                 p.CategoryID = 00;
                 p.Featured = false;
@@ -67,7 +67,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Climbing Belay Device";
-                p.ProductDescription = "Belay with ease";
+                p.ProductDescription = "Belay with ease.";
                 p.UnitPrice = 99.99;
                 p.CategoryID = 00;
                 p.Featured = false;
@@ -77,7 +77,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Climbing Quickdraw";
-                p.ProductDescription = "precisioned attachment";
+                p.ProductDescription = "Precisioned attachment.";
                 p.UnitPrice = 14.99;
                 p.CategoryID = 00;
                 p.Featured = false;
@@ -87,7 +87,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Climbing Rope";
-                p.ProductDescription = "Strong durable rope for scaling cliffs";
+                p.ProductDescription = "Strong durable rope for scaling cliffs.";
                 p.UnitPrice = 199.99;
                 p.CategoryID = 00;
                 p.Featured = false;
@@ -97,7 +97,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Climbing Cams";
-                p.ProductDescription = "For when the only thing to hold on to is between a rock and another rock";
+                p.ProductDescription = "For when the only thing to hold on to is between a rock and another rock.";
                 p.UnitPrice = 300;
                 p.CategoryID = 00;
                 p.Featured = false;
@@ -127,7 +127,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Hiking Sleeping Bag";
-                p.ProductDescription = "Made of that material that will hug you back when you sleep";
+                p.ProductDescription = "Made of that material that will hug you back when you sleep.";
                 p.UnitPrice = 140.00;
                 p.CategoryID = 01;
                 p.Featured = false;
@@ -137,7 +137,7 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Apparel-Jacket";
-                p.ProductDescription = "Look ready to take on the climb";
+                p.ProductDescription = "Look ready to take on the climb.";
                 p.UnitPrice = 170.00;
                 p.CategoryID = 11;
                 p.Featured = false;
@@ -147,20 +147,23 @@ namespace FinalProject
 
                 p = new Products();
                 p.ProductName = "Apparel-Pants";
-                p.ProductDescription = "The swiss army knife of pants";
+                p.ProductDescription = "The swiss army knife of pants.";
                 p.UnitPrice = 80.00;
                 p.CategoryID = 11;
                 p.Featured = false;
                 p.Stock = 360;
+                p.image = "/images/apparel-pants.jpg";
                 content.Products.Add(p);
 
                 p = new Products();
                 p.ProductName = "Apparel-Shorts";
-                p.ProductDescription = "Like the pants but half the length";
+                p.ProductDescription = "Like the pants but half the length.";
                 p.UnitPrice = 60.00;
                 p.CategoryID = 11;
                 p.Featured = false;
                 p.Stock = 360;
+                p.image = "/images/apparel-shorts.jpg";
+                //this image can be changed, i just couldn't find a picture of actual shorts
                 content.Products.Add(p);
 
                 content.SaveChanges();

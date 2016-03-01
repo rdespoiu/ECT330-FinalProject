@@ -83,6 +83,8 @@
     <Content Include="CSS\ProductsMasterStylesheet.css" />
     <Content Include="hiking.aspx" />
     <Content Include="images\apparel-jacket.jpg" />
+    <Content Include="images\apparel-pants.jpg" />
+    <Content Include="images\apparel-shorts.jpg" />
     <Content Include="images\climbing-belaydevice.png" />
     <Content Include="images\climbing-cams.jpg" />
     <Content Include="images\climbing-carabiner.jpg" />
