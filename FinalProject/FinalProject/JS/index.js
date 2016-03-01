@@ -30,7 +30,7 @@
 
 });
 
-$(document).mouseup(function (e) {
+$(document).mousedown(function (e) {
     var container = $("#signInContent");
 
     if (!container.is(e.target)
@@ -38,3 +38,4 @@ $(document).mouseup(function (e) {
         $(container).css("visibility", "hidden");
     }
 });
+

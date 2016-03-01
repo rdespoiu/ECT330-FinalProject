@@ -10,8 +10,19 @@ namespace FinalProject
 {
     public partial class ProductsMaster : System.Web.UI.MasterPage
     {
+        String userFirstName;
+
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Request["action"] == "logout")
+            {
+                Session.Clear();
+                Response.Redirect("/index.aspx");
+            }
+
+            lblInvalidCredentials.Visible = false;
+            pnlSignIn.Visible = true;
+            pnlSignedInOptions.Visible = false;
             updateUserName();
         }
 
@@ -29,7 +40,12 @@ namespace FinalProject
                                     select c.FirstName).FirstOrDefault();
 
                     lblSignInUsername.Text = "Hi, " + (String)userName + "! &#x25BC;";
+                    userFirstName = (String)userName;
                 }
+
+                pnlSignIn.Visible = false;
+                pnlSignedInOptions.Visible = true;
+                lblFirstName.Text = userFirstName;
             }
         }
 
@@ -47,18 +63,14 @@ namespace FinalProject
                     Session["FirstName"] = user.FirstName;
                     Session["LastName"] = user.LastName;
 
-                    /*
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alert",
-                "alert('Login credentials accepted!');", true);*/  //Got it to update with user's first name upon login. This is no longer necessary.
-
+                    lblInvalidCredentials.Visible = false;
                     updateUserName();
 
                 }
                 else
                 {
-                    //Display invalid login
-                    /* ScriptManager.RegisterStartupScript(this, this.GetType(), "err-msg",
-                 "alert('Incorrect login credentials given!');", true);*/ //THIS WILL REDIRECT USERS TO ANOTHER SIGN IN PAGE WITH AN ERROR MESSAGE OF INVALID CREDENTIALS
+                    lblInvalidCredentials.Visible = true;
+                    signInContent.Style.Add("visibility", "visible");
 
                 }
             }
