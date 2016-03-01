@@ -15,8 +15,6 @@ namespace FinalProject
             if (Session["LoggedInId"] != null)
             {
 
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert",
-                "alert('You are logged in as " + Session["FirstName"] + " " + Session["LastName"] + "');", true);
             }
 
             populateData();
