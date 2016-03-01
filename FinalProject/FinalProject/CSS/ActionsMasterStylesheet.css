@@ -183,6 +183,39 @@ a:hover {
     overflow-y: scroll;
 }
 
+#registerContent {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+#registerLeft {
+    text-align: left;
+    width: 50%;
+    height: 100%;
+
+}
+
+#registerRight {
+    text-align: left;
+    width: 50%;
+    height: 100%;
+
+}
+
+.registerInput {
+    border: none;
+    height: 8%;
+    width: 95%;
+    border-radius: 7px;
+    background-color: #D5E5EB;
+}
+
+.registerText {
+    font-size: 15px;
+}
+
 #top img {
     height: 100px;
     width: 100px;
