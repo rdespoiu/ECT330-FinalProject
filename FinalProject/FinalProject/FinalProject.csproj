@@ -75,12 +75,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="account.aspx" />
+    <Content Include="account.css" />
     <Content Include="apparel.aspx" />
     <Content Include="cart.aspx" />
     <Content Include="climbing.aspx" />
     <Content Include="CSS\ActionsMasterStylesheet.css" />
     <Content Include="CSS\ProductDetailMasterStylesheet.css" />
     <Content Include="CSS\ProductsMasterStylesheet.css" />
+    <Content Include="editinfo.aspx" />
     <Content Include="hiking.aspx" />
     <Content Include="images\apparel-jacket.jpg" />
     <Content Include="images\apparel-pants.jpg" />
@@ -99,6 +102,7 @@
     <Content Include="index.aspx" />
     <Content Include="CSS\index.css" />
     <Content Include="JS\index.js" />
+    <Content Include="orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="PopulateStoreData.aspx" />
     <Content Include="product.aspx" />
@@ -118,6 +122,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="account.aspx.cs">
+      <DependentUpon>account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="account.aspx.designer.cs">
+      <DependentUpon>account.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Actions.Master.cs">
       <DependentUpon>Actions.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -146,6 +157,13 @@
     <Compile Include="climbing.aspx.designer.cs">
       <DependentUpon>climbing.aspx</DependentUpon>
     </Compile>
+    <Compile Include="editinfo.aspx.cs">
+      <DependentUpon>editinfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editinfo.aspx.designer.cs">
+      <DependentUpon>editinfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -169,6 +187,13 @@
     <Compile Include="Models\Orders.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Models\StoreContent.cs" />
+    <Compile Include="orders.aspx.cs">
+      <DependentUpon>orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orders.aspx.designer.cs">
+      <DependentUpon>orders.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PopulateStoreData.aspx.cs">
       <DependentUpon>PopulateStoreData.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

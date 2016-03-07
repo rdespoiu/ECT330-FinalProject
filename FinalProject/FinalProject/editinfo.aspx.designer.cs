@@ -10,16 +10,7 @@
 namespace FinalProject {
     
     
-    public partial class register {
-        
-        /// <summary>
-        /// lblPageName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPageName;
+    public partial class editinfo {
         
         /// <summary>
         /// txtFirstName control.
@@ -292,12 +283,12 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.Label lblYes;
         
         /// <summary>
-        /// btnSubmit control.
+        /// btnSubmitEdits control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmit;
+        protected global::System.Web.UI.WebControls.Button btnSubmitEdits;
     }
 }

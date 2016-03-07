@@ -12,7 +12,15 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["LoggedInId"] != null)
+            {
+                Response.Redirect("account.aspx?Id=" + Session["LoggedInId"].ToString());
+            }
+
             populateStates();
+
+
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -50,6 +58,14 @@ namespace FinalProject
                         {
                             newCustomer.NewsLetter = false;
                         }
+
+                        content.Customer.Add(newCustomer);
+                        content.SaveChanges();
+
+                        Session["LoggedInId"] = newCustomer.Id;
+                        Response.Redirect("account.aspx?Id=" + newCustomer.Id.ToString());
+
+
                     } else
                     {
                         lblPageName.Text = "Username is already taken! Please choose another.";

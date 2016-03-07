@@ -44,7 +44,7 @@
                                 Hi, <asp:Label ID="lblFirstName" runat="server"></asp:Label>!
                                 <br />
                                 <br />
-                                <asp:HyperLink ID="lnkMyAccount" runat="server" Text="My Account" NavigateUrl="#"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkMyAccount" runat="server" Text="My Account" NavigateUrl="account.aspx"></asp:HyperLink>
                                 <asp:HyperLink ID="lnlSignOut" runat="server" Text="Sign Out" NavigateUrl="/index.aspx?action=logout"></asp:HyperLink>
                             </asp:Panel>                            
                         </div>

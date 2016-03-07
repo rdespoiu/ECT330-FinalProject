@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Actions.Master" AutoEventWireup="true" CodeBehind="register.aspx.cs" Inherits="FinalProject.register" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Actions.Master" AutoEventWireup="true" CodeBehind="editinfo.aspx.cs" Inherits="FinalProject.editinfo" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
@@ -7,7 +6,7 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphPageName" runat="server">
-    <p><asp:Label ID="lblPageName" runat="server" Text="Register for a new account"></asp:Label></p>
+
 </asp:Content>
 
 
@@ -78,18 +77,7 @@
                 <asp:Label ID="lblYes" runat="server" Text="YES! Send me those deals!" CssClass="registerText"></asp:Label>
             </div>
     </div>
-    
-
-    
-
-
-
-
-
-
-
 </asp:Content>
-
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphBottom" runat="server">
 
@@ -98,8 +86,7 @@
     </div>
 
     <div id="bottomRight">
-        <asp:Button ID="btnSubmit" runat="server" Text="Register" OnClick="btnSubmit_Click" CssClass="actionButton" />
+        <asp:Button ID="btnSubmitEdits" runat="server" Text="Submit Changes" OnClick="btnSubmitEdits_Click" CssClass="actionButton" />
     </div>
-    
-    
+
 </asp:Content>
