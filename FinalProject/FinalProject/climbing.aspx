@@ -3,7 +3,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphPageName" runat="server">
-    <p>CLIMBING</p>
+    <p><asp:Label ID="lblPageName" runat="server" Text="CLIMBING"></asp:Label></p>
 </asp:Content>
 
 

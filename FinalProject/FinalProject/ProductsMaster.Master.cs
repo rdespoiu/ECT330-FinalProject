@@ -62,6 +62,7 @@ namespace FinalProject
                     Session["LoggedInId"] = user.Id.ToString();
                     Session["FirstName"] = user.FirstName;
                     Session["LastName"] = user.LastName;
+                    Session["cartID"] = user.Id.ToString();
 
                     lblInvalidCredentials.Visible = false;
                     updateUserName();

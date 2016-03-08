@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphPageName" runat="server">
+    <p>Search</p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphTop" runat="server">
     <asp:Label runat="server" ID="lblSearch" Text="Found "></asp:Label>

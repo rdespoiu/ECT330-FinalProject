@@ -20,6 +20,7 @@ namespace FinalProject
             populateData();
         }
 
+
         protected void populateData()
         {
             using (StoreContent content = new StoreContent())
