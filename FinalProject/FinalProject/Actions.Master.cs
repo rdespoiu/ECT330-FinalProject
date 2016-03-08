@@ -19,11 +19,28 @@ namespace FinalProject
                 Session.Clear();
                 Response.Redirect("/index.aspx");
             }
+            if (!IsPostBack)
+            {
+                txtSearchBar.Attributes.Add("onKeyPress", "doClick('" + btnSearch.ClientID + "',event)");
+            }
 
             lblInvalidCredentials.Visible = false;
             pnlSignIn.Visible = true;
             pnlSignedInOptions.Visible = false;
             updateUserName();
+        }
+        
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearchBar.Text))
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg",
+                    "alert('Please enter some word to search.');", true);
+            }
+            else
+            {
+                Response.Redirect("Search.aspx?query=" + txtSearchBar.Text);
+            }
         }
 
         protected void updateUserName()
