@@ -17,10 +17,11 @@
     <!--Table will be populated from user cart cookies. Current item is a placeholder for design //RID-->
     <asp:Table ID="tblCart" runat="server">
         <asp:TableRow>
-            <asp:TableCell><img src="/Assets/testshoe.jpg" /></asp:TableCell>
-            <asp:TableCell><a href="#">Sportiva TC Pro Rock Shoes</a></asp:TableCell>
-            <asp:TableCell>$180.00</asp:TableCell>
-            <asp:TableCell><asp:Button ID="btnRemove" runat="server" Text="Remove" CssClass="actionButton" /></asp:TableCell>
+            <asp:TableHeaderCell>Image</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Product Name</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Unit Cost</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Units</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Remove</asp:TableHeaderCell>
         </asp:TableRow>
     </asp:Table>
 </asp:Content>
@@ -28,7 +29,7 @@
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphBottom" runat="server">
     <div id="bottomLeft">
-        <asp:Label ID="lblSubtotal" runat="server" Text="Subtotal: $720.00"></asp:Label>
+        <asp:Label ID="lblSubtotal" runat="server" Text="Subtotal: $"></asp:Label>
         <br />
         <asp:Label ID="lblShipping" runat="server" Text="Free Shipping!"></asp:Label>
     </div>
