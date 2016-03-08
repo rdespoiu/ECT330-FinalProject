@@ -59,7 +59,7 @@
                                 <br />
                                 <asp:Button ID="btnSignIn" runat="server" Text="Sign In" CssClass="signInBtn" OnClick="btnSignIn_Click"/>
                                 <br />
-                                <asp:HyperLink ID="lnkRegister" runat="server" Text="Register" NavigateUrl="#"></asp:HyperLink>
+                                <asp:HyperLink ID="lnkRegister" runat="server" Text="Register" NavigateUrl="register.aspx"></asp:HyperLink>
                                 <asp:HyperLink ID="lnkForgot" runat="server" Text="Forgot Password" NavigateUrl="#"></asp:HyperLink>
                                 <asp:Label ID="lblInvalidCredentials" runat="server" Text="Username/Password combination was incorrect!" ForeColor="Red" Font-Size="Small"></asp:Label>
                                 </asp:Panel>
@@ -75,7 +75,7 @@
                     </li>
                     <li><a href="cart.aspx">Shopping Cart</a></li> 
                     <li><asp:TextBox runat="server" ID="txtSearchBar" Placeholder="Search" CssClass="searchBox"></asp:TextBox></li>
-                    <li><asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" /></li>
+                    <li><asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" CssClass="btnSearch" /></li>
                 </ul>
             </div>
 
@@ -108,7 +108,7 @@
 
 
             <footer id="footer">
-            <p>Footer information will go here</p>
+            <p>This website is for educational purposes only. Data is not transmitted securely. Please do not enter any personally identifiable information</p>
             </footer>
 
 
