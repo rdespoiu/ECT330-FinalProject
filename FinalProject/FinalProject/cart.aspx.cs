@@ -11,7 +11,58 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Test cart     Session["cartID"] = 2;
+            if (Session["cartID"] == null)
+            {
+                lblCartQuantity.Text = "(0 items)";
+                lblSubtotal.Text += "0.00";
+            }
+            else
+            {
+                int cartId = Int32.Parse(Session["cartID"].ToString());
+                int cartQuantity = 0;
+                using (StoreContent context = new StoreContent())
+                {
+                    var cart = (from c in context.Orders
+                                where c.Id == cartId
+                                select c).First();
+                    if(cart!= null)
+                    {
+                        var orderitems = (from o in context.OrderItem
+                                         where o.OrderID == cartId
+                                         select o).ToList();
+                        foreach(OrderItem item in orderitems)
+                        {
+                            var product = (from p in context.Products
+                                           where p.Id == item.ProductID
+                                           select p).First();
+                            cartQuantity += item.Quantity;
+                            TableRow row = new TableRow();
+                            TableCell cell = new TableCell();
+                            cell.Text = "<img src=\""+product.image+ "\" />";
+                            row.Cells.Add(cell);
 
+                            cell = new TableCell();
+                            cell.Text = product.ProductName;
+                            row.Cells.Add(cell);
+
+                            cell = new TableCell();
+                            cell.Text = product.UnitPrice.ToString();
+                            row.Cells.Add(cell);
+
+                            cell = new TableCell();
+                            cell.Text = item.Quantity.ToString();
+                            row.Cells.Add(cell);
+
+                            //Add in remove button
+                            tblCart.Rows.Add(row);
+                        }
+                        lblCartQuantity.Text = "(" + cartQuantity + " items)";
+                        lblSubtotal.Text += cart.SubTotal.ToString();
+                        
+                    }
+                }
+            }
         }
     }
 }
