@@ -86,11 +86,13 @@
     <Content Include="editinfo.aspx" />
     <Content Include="hiking.aspx" />
     <Content Include="images\apparel-jacket.jpg" />
+    <Content Include="images\apparel-jacket.png" />
     <Content Include="images\apparel-pants.jpg" />
     <Content Include="images\apparel-shorts.jpg" />
     <Content Include="images\climbing-belaydevice.png" />
     <Content Include="images\climbing-cams.jpg" />
     <Content Include="images\climbing-carabiner.jpg" />
+    <Content Include="images\climbing-carabiner.png" />
     <Content Include="images\climbing-harness.jpg" />
     <Content Include="images\climbing-helmet.jpg" />
     <Content Include="images\climbing-quickdraw.jpg" />
@@ -99,6 +101,7 @@
     <Content Include="images\hiking-boots.jpg" />
     <Content Include="images\hiking-pack.jpg" />
     <Content Include="images\hiking-sleepingbag.jpg" />
+    <Content Include="images\hiking-sleepingbag.png" />
     <Content Include="index.aspx" />
     <Content Include="CSS\index.css" />
     <Content Include="JS\index.js" />
