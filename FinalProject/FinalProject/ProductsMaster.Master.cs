@@ -19,6 +19,10 @@ namespace FinalProject
                 Session.Clear();
                 Response.Redirect("/index.aspx");
             }
+            if (!IsPostBack)
+            {
+                txtSearchBar.Attributes.Add("onKeyPress", "doClick('" + btnSearch.ClientID + "',event)");
+            }
 
             lblInvalidCredentials.Visible = false;
             pnlSignIn.Visible = true;
