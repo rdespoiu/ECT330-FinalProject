@@ -70,8 +70,9 @@ namespace FinalProject
         {
             using (StoreContent context = new StoreContent())
             {
+                var pwd = FinalProject.SecuredPasswordHash.GenerateHash(txtPassword.Text);
                 var user = (from c in context.Customer
-                            where c.UserName == txtUsername.Text && c.Password == txtPassword.Text
+                            where c.UserName == txtUsername.Text && c.Password == pwd
                             select c).FirstOrDefault();
 
                 if (user != null)
