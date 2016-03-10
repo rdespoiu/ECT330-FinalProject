@@ -76,5 +76,18 @@ namespace FinalProject
                 }
             }
         }
+
+        protected void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearchBar.Text))
+            {
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType(), "err_msg",
+                    "alert('Please enter some word to search.');", true);
+            }
+            else
+            {
+                Response.Redirect("Search.aspx?query=" + txtSearchBar.Text);
+            }
+        }
     }
 }
