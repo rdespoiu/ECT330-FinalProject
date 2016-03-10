@@ -10,43 +10,32 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphCategories" runat="server">
     <!--Add Categories to Left Hand Options Menu-->
 
-    <asp:CheckBox ID="chkShoes" runat="server" Checked="false" />    
-    <asp:Label ID="lblShoes" runat="server" Text="Climbing Shoes"></asp:Label>
+    <asp:CheckBox ID="chkShoes" runat="server" Text="Climbing Shoes" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
     <br />
-    <asp:CheckBox ID="chkHarnesses" runat="server" Checked="false" />    
-    <asp:Label ID="lblHarnesses" runat="server" Text="Harnesses"></asp:Label>
+    <asp:CheckBox ID="chkHarnesses" runat="server" Checked="false" Text="Harnesses" OnCheckedChanged="checkBoxChanged" AutoPostBack="true" />    
     <br />
-    <asp:CheckBox ID="chkRopes" runat="server" Checked="false" />    
-    <asp:Label ID="lblRopes" runat="server" Text="Ropes"></asp:Label>
+    <asp:CheckBox ID="chkRopes" runat="server" Checked="false" Text="Ropes" OnCheckedChanged="checkBoxChanged" AutoPostBack="true" />    
     <br />
-    <asp:CheckBox ID="chkCarabiners" runat="server" Checked="false" />    
-    <asp:Label ID="lblCarabiners" runat="server" Text="Carabiners"></asp:Label>
+    <asp:CheckBox ID="chkCarabiners" runat="server" Checked="false" Text="Carabiners" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />    
     <br />
-    <asp:CheckBox ID="chkBelay" runat="server" Checked="false" />    
-    <asp:Label ID="lblBelay" runat="server" Text="Belay Devices"></asp:Label>
+    <asp:CheckBox ID="chkBelay" runat="server" Checked="false" Text="Belay Devices" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />    
     <br />
-    <asp:CheckBox ID="chkQuickdraws" runat="server" Checked="false" />    
-    <asp:Label ID="lblQuickdraws" runat="server" Text="Quickdraws"></asp:Label>
+    <asp:CheckBox ID="chkQuickdraws" runat="server" Checked="false" Text="Quickdraws" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />    
     <br />
-    <asp:CheckBox ID="chkHelmets" runat="server" Checked="false" />    
-    <asp:Label ID="lblHelmets" runat="server" Text="Helmets"></asp:Label>
+    <asp:CheckBox ID="chkHelmets" runat="server" Checked="false" Text="Helmets" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />    
 </asp:Content>
 
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphPrice" runat="server">
     <!--Add Price Ranges to Left Hand Options Menu-->
 
-    <asp:CheckBox ID="chkRangeZeroFifty" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeZeroFifty" runat="server" Text="$0 - $50"></asp:Label>
+    <asp:CheckBox ID="chkRangeZeroFifty" runat="server" Checked="false" Text="$0 - $50" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
     <br />
-    <asp:CheckBox ID="chkRangeFiftyOneHundred" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeFiftyOneHundred" runat="server" Text="$50 - $100"></asp:Label>
+    <asp:CheckBox ID="chkRangeFiftyOneHundred" runat="server" Checked="false" Text="$50 - $100" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
     <br />
-    <asp:CheckBox ID="chkRangeOneHundredTwoHundred" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeOneHundredTwoHundred" runat="server" Text="$100 - $200"></asp:Label>
+    <asp:CheckBox ID="chkRangeOneHundredTwoHundred" runat="server" Checked="false" Text="$100 - $200" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
     <br />
-    <asp:CheckBox ID="chkRangeTwoHundredPlus" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeTwoHundredPlus" runat="server" Text="$200+"></asp:Label>
+    <asp:CheckBox ID="chkRangeTwoHundredPlus" runat="server" Checked="false" Text ="$200+" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
 </asp:Content>
 
 
