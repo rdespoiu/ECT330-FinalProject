@@ -29,13 +29,13 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="cphPrice" runat="server">
     <!--Add Price Ranges to Left Hand Options Menu-->
 
-    <asp:CheckBox ID="chkRangeZeroFifty" runat="server" Checked="false" Text="$0 - $50" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
+    <asp:CheckBox ID="chkRangeZeroFifty" runat="server" Checked="false" Text="$0 - $50" OnCheckedChanged="priceCheckBoxChanged"  AutoPostBack="true" />
     <br />
-    <asp:CheckBox ID="chkRangeFiftyOneHundred" runat="server" Checked="false" Text="$50 - $100" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
+    <asp:CheckBox ID="chkRangeFiftyOneHundred" runat="server" Checked="false" Text="$50 - $100" OnCheckedChanged="priceCheckBoxChanged"  AutoPostBack="true" />
     <br />
-    <asp:CheckBox ID="chkRangeOneHundredTwoHundred" runat="server" Checked="false" Text="$100 - $200" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
+    <asp:CheckBox ID="chkRangeOneHundredTwoHundred" runat="server" Checked="false" Text="$100 - $200" OnCheckedChanged="priceCheckBoxChanged"  AutoPostBack="true" />
     <br />
-    <asp:CheckBox ID="chkRangeTwoHundredPlus" runat="server" Checked="false" Text ="$200+" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />
+    <asp:CheckBox ID="chkRangeTwoHundredPlus" runat="server" Checked="false" Text ="$200+" OnCheckedChanged="priceCheckBoxChanged"  AutoPostBack="true" />
 </asp:Content>
 
 
