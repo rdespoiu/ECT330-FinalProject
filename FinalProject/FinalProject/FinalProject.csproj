@@ -238,6 +238,7 @@
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
     </Compile>
+    <Compile Include="SecuredPasswordHash.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
