@@ -48,7 +48,9 @@ namespace FinalProject
                         newCustomer.State = ddlState.SelectedItem.ToString();
                         newCustomer.email = txtEmail.Text;
                         newCustomer.UserName = txtUsername.Text;
-                        newCustomer.Password = txtPass1.Text;
+                        
+                        //password will be hashed here
+                        newCustomer.Password = FinalProject.SecuredPasswordHash.GenerateHash(txtPass1.Text);
 
                         if (chkNewsletter.Checked)
                         {

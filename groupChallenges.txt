@@ -2,8 +2,11 @@ challenges in final project:
 -learning to use github
 -chosing a form of communication
 -keeping track of all changes
+-only one person can push/ make changes at one time
 
 challenges faced in putting together the application:
 -getting github to work properly (usu. an issue with the git.lock file)
 -issues when one person was making changes at the same time and our changes couldn't be shared
 -mostly it was github
+-when search bar is used, login flashes
+-
