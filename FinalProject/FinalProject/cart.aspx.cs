@@ -56,6 +56,8 @@ namespace FinalProject
                             row.Cells.Add(cell);
 
                             //Add in remove button
+
+
                             tblCart.Rows.Add(row);
                         }
                         lblCartQuantity.Text = "(" + cartQuantity + " items)";
@@ -65,5 +67,6 @@ namespace FinalProject
                 }
             }
         }
+
     }
 }
