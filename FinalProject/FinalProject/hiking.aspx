@@ -4,47 +4,38 @@
 
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphPageName" runat="server">
-    <p>HIKING</p>
+    <p><asp:Label ID="lblPageName" runat="server" Text="HIKING"></asp:Label></p>
 </asp:Content>
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphCategories" runat="server">
     <!--Add Categories to Left Hand Options Menu-->
 
-    <asp:CheckBox ID="chkPacks" runat="server" Checked="false" />    
-    <asp:Label ID="lblPacks" runat="server" Text="Packs"></asp:Label>
+    <asp:CheckBox ID="chkPacks" runat="server" Checked="false" Text="Packs" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
     <br />
-    <asp:CheckBox ID="chkSleepingBags" runat="server" Checked="false" />    
-    <asp:Label ID="lblSleepingBags" runat="server" Text="Sleeping Bags"></asp:Label>
+    <asp:CheckBox ID="chkSleepingBags" runat="server" Checked="false" Text="Sleeping Bags" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
     <br />
-    <asp:CheckBox ID="chkHikingBoots" runat="server" Checked="false" />    
-    <asp:Label ID="lblHikingBoots" runat="server" Text="Hiking Boots"></asp:Label>
+    <asp:CheckBox ID="chkHikingBoots" runat="server" Checked="false" Text="Hiking Boots" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
 </asp:Content>
 
 
 <asp:Content ID="Content4" ContentPlaceHolderID="cphPrice" runat="server">
     <!--Add Price Ranges to Left Hand Options Menu-->
 
-    <asp:CheckBox ID="chkRangeZeroFifty" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeZeroFifty" runat="server" Text="$0 - $50"></asp:Label>
+    <asp:CheckBox ID="chkRangeZeroFifty" runat="server" Checked="false" Text="$0 - $50" AutoPostBack="true" OnCheckedChanged="priceCheckBoxChanged" />
     <br />
-    <asp:CheckBox ID="chkRangeFiftyOneHundred" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeFiftyOneHundred" runat="server" Text="$50 - $100"></asp:Label>
+    <asp:CheckBox ID="chkRangeFiftyOneHundred" runat="server" Checked="false" Text="$50 - $100" AutoPostBack="true" OnCheckedChanged="priceCheckBoxChanged" />
     <br />
-    <asp:CheckBox ID="chkRangeOneHundredTwoHundred" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeOneHundredTwoHundred" runat="server" Text="$100 - $200"></asp:Label>
+    <asp:CheckBox ID="chkRangeOneHundredTwoHundred" runat="server" Checked="false" Text="$100 - $200" AutoPostBack="true" OnCheckedChanged="priceCheckBoxChanged" />
     <br />
-    <asp:CheckBox ID="chkRangeTwoHundredPlus" runat="server" Checked="false" />
-    <asp:Label ID="lblRangeTwoHundredPlus" runat="server" Text="$200+"></asp:Label>
+    <asp:CheckBox ID="chkRangeTwoHundredPlus" runat="server" Checked="false" Text="$200+" AutoPostBack="true" OnCheckedChanged="priceCheckBoxChanged" />
 </asp:Content>
 
 
 <asp:Content ID="Content5" ContentPlaceHolderID="cphRightDetail" runat="server">
-    <!--Uses table to display products. Will populate from backend DB tables-->
-    <!--Column order: Image, Product Name, Price, AddToCart-->
-    <!--Header cells are not necessary-->
-    <!--DELETE INITIAL ROW, THIS IS FOR TESTING PURPOSES ONLY-->
+
     <asp:Table ID="tblProducts" runat="server">
         
     </asp:Table>
+
 </asp:Content>

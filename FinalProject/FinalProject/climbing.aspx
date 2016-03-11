@@ -10,7 +10,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphCategories" runat="server">
     <!--Add Categories to Left Hand Options Menu-->
 
-    <asp:CheckBox ID="chkShoes" runat="server" Text="Climbing Shoes" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
+    <asp:CheckBox ID="chkShoes" runat="server" Checked="false" Text="Climbing Shoes" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
     <br />
     <asp:CheckBox ID="chkHarnesses" runat="server" Checked="false" Text="Harnesses" OnCheckedChanged="checkBoxChanged" AutoPostBack="true" />    
     <br />
@@ -42,15 +42,9 @@
 
 
 <asp:Content ID="Content5" ContentPlaceHolderID="cphRightDetail" runat="server">
-    <!--Uses table to display products. Will populate from backend DB tables-->
-    <!--Column order: Image, Product Name, Price, AddToCart-->
-    <!--Header cells are not necessary-->
-    <!--DELETE INITIAL ROW, THIS IS FOR TESTING PURPOSES ONLY-->
-    <!--<asp:TableCell><img src="/Assets/testshoe.jpg" /></asp:TableCell>
-            <asp:TableCell><a href="product.aspx">Sportiva TC Pro Rock Shoes</a></asp:TableCell>
-            <asp:TableCell><a href="cart.aspx">$180.00</a></asp:TableCell>
-            <asp:TableCell><asp:Button ID="btnAdd" runat="server" Text="Add To Cart" CssClass="addToCartButton" /></asp:TableCell>-->
+
     <asp:Table ID="tblProducts" runat="server">
         
     </asp:Table>
+
 </asp:Content>

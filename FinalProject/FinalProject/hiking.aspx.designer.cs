@@ -13,6 +13,15 @@ namespace FinalProject {
     public partial class hiking {
         
         /// <summary>
+        /// lblPageName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPageName;
+        
+        /// <summary>
         /// chkPacks control.
         /// </summary>
         /// <remarks>
@@ -20,15 +29,6 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkPacks;
-        
-        /// <summary>
-        /// lblPacks control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPacks;
         
         /// <summary>
         /// chkSleepingBags control.
@@ -40,15 +40,6 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.CheckBox chkSleepingBags;
         
         /// <summary>
-        /// lblSleepingBags control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblSleepingBags;
-        
-        /// <summary>
         /// chkHikingBoots control.
         /// </summary>
         /// <remarks>
@@ -56,15 +47,6 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkHikingBoots;
-        
-        /// <summary>
-        /// lblHikingBoots control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblHikingBoots;
         
         /// <summary>
         /// chkRangeZeroFifty control.
@@ -76,15 +58,6 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.CheckBox chkRangeZeroFifty;
         
         /// <summary>
-        /// lblRangeZeroFifty control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRangeZeroFifty;
-        
-        /// <summary>
         /// chkRangeFiftyOneHundred control.
         /// </summary>
         /// <remarks>
@@ -92,15 +65,6 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkRangeFiftyOneHundred;
-        
-        /// <summary>
-        /// lblRangeFiftyOneHundred control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRangeFiftyOneHundred;
         
         /// <summary>
         /// chkRangeOneHundredTwoHundred control.
@@ -112,15 +76,6 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.CheckBox chkRangeOneHundredTwoHundred;
         
         /// <summary>
-        /// lblRangeOneHundredTwoHundred control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRangeOneHundredTwoHundred;
-        
-        /// <summary>
         /// chkRangeTwoHundredPlus control.
         /// </summary>
         /// <remarks>
@@ -128,15 +83,6 @@ namespace FinalProject {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkRangeTwoHundredPlus;
-        
-        /// <summary>
-        /// lblRangeTwoHundredPlus control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblRangeTwoHundredPlus;
         
         /// <summary>
         /// tblProducts control.
