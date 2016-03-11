@@ -161,7 +161,7 @@ namespace FinalProject
             }
             else
             {
-                lblPageName.Text = "CLIMBING";
+                lblPageName.Text = "HIKING";
 
             }
 
@@ -374,7 +374,7 @@ namespace FinalProject
             }
             else
             {
-                lblPageName.Text = "CLIMBING";
+                lblPageName.Text = "HIKING";
             }
 
             uncheckBoxes(chkBox);
