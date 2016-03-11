@@ -1,0 +1,59 @@
+﻿body {
+}
+
+#checkoutTop {
+    width: 100%;
+    height: 35%;
+    display: inline-flex;
+}
+
+#checkoutLeft {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
+
+#checkoutRight {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+
+#checkoutBottom {
+    height: 65%;
+    width: 100%;
+}
+
+#checkoutConfirmBottom {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+}
+
+#checkoutConfirmBottomLeft {
+    width: 50%;
+    height: 100%;
+    text-align: left;
+}
+
+#checkoutConfirmBottomRight {
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+
+.payButton {
+    border: none;
+    border-radius: 5px;
+    height: 40%;
+    width: 30%;
+    font-size: 20px;
+    background-color: deepskyblue;
+    opacity: 0.9;
+    color: black;
+
+}
+
+.payButton:hover {
+    opacity: 1.0;
+}
