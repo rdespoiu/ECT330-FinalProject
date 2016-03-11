@@ -373,7 +373,7 @@ namespace FinalProject
 
         protected void populateCheckBoxArray()
         {
-            checkBoxArray = new CheckBox[11];
+            checkBoxArray = new CheckBox[12];
 
             checkBoxArray[0] = chkShoes;
             checkBoxArray[1] = chkHarnesses;
@@ -382,11 +382,12 @@ namespace FinalProject
             checkBoxArray[4] = chkBelay;
             checkBoxArray[5] = chkQuickdraws;
             checkBoxArray[6] = chkHelmets;
+            checkBoxArray[7] = chkCams;
 
-            checkBoxArray[7] = chkRangeZeroFifty;
-            checkBoxArray[8] = chkRangeFiftyOneHundred;
-            checkBoxArray[9] = chkRangeOneHundredTwoHundred;
-            checkBoxArray[10] = chkRangeTwoHundredPlus;
+            checkBoxArray[8] = chkRangeZeroFifty;
+            checkBoxArray[9] = chkRangeFiftyOneHundred;
+            checkBoxArray[10] = chkRangeOneHundredTwoHundred;
+            checkBoxArray[11] = chkRangeTwoHundredPlus;
         }
 
         protected void uncheckBoxes(CheckBox chkToKeep)

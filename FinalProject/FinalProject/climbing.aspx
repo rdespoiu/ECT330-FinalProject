@@ -22,7 +22,9 @@
     <br />
     <asp:CheckBox ID="chkQuickdraws" runat="server" Checked="false" Text="Quickdraws" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />    
     <br />
-    <asp:CheckBox ID="chkHelmets" runat="server" Checked="false" Text="Helmets" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />    
+    <asp:CheckBox ID="chkHelmets" runat="server" Checked="false" Text="Helmets" OnCheckedChanged="checkBoxChanged"  AutoPostBack="true" />   
+    <br />
+    <asp:CheckBox ID="chkCams" runat="server" Checked ="false" Text="Cams" OnCheckedChanged="checkBoxChanged" AutoPostBack="true" /> 
 </asp:Content>
 
 
