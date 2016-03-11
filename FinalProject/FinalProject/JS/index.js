@@ -1,11 +1,11 @@
 ﻿$(document).ready(function () {
 
     $("#leftFeatured").click(function (event) {
-        window.location.href = "#"; /*Will redirect to the product's page*/
+        window.location.href = "climbing.aspx"; /*Will redirect to the product's page*/
     });
 
     $("#rightFeatured").click(function (event) {
-        window.location.href = "#"; /*Will redirect to the product's page*/
+        window.location.href = "hiking.aspx"; /*Will redirect to the product's page*/
     });
 
     $("#bottomOne").click(function (event) {

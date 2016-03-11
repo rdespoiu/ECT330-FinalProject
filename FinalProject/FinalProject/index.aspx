@@ -57,29 +57,29 @@
                 <div id="top">
                     <div id="leftFeatured">
                         <asp:Image ID="imgLeftFeatured" runat="server" ImageUrl="/Assets/climber1.jpg" CssClass="leftFeaturedImg" />
-                        <p id="leftFeaturedText"><a href="#">Featured Product 1</a></p>
+                        <p id="leftFeaturedText"><a href="climbing.aspx">Send that route with all new climbing gear!</a></p>
                     </div>
 
                     <div id="rightFeatured">
-                        <asp:Image ID="imgRightFeatured" runat="server" ImageUrl="/Assets/climber1.jpg" CssClass="rightFeaturedImg" />
-                        <p id="rightFeaturedText"><a href="#">Featured Product 2</a></p>
+                        <asp:Image ID="imgRightFeatured" runat="server" ImageUrl="/Assets/hiking.jpg" CssClass="rightFeaturedImg" />
+                        <p id="rightFeaturedText"><a href="hiking.aspx">Ditch your old hiking equipment!</a></p>
                     </div>
                 </div>
                 
                 <div id="bottom">
                     <div id="bottomOne">
-                        <asp:Image ID="imgBottomOne" runat="server" ImageUrl="/Assets/greenlandscape.jpg" CssClass="bottomOneImg" />
-                        <p id="bottomOneFeaturedText"><a href="#">Featured Product 3</a></p>
+                        <asp:Image ID="imgBottomOne" runat="server" ImageUrl="/Assets/sleepingbagpromo.jpg" CssClass="bottomOneImg" />
+                        <p id="bottomOneFeaturedText"><a href="#">UltraTherm Sleeping Bag</a></p>
                     </div>
 
                     <div id="bottomTwo">
-                        <asp:Image ID="imgBottomTwo" runat="server" ImageUrl="/Assets/greenlandscape.jpg" CssClass="bottomTwoImg" />
-                        <p id="bottomTwoFeaturedText"><a href="#">Featured Product 4</a></p>
+                        <asp:Image ID="imgBottomTwo" runat="server" ImageUrl="/Assets/climbingshoepromo.jpg" CssClass="bottomTwoImg" />
+                        <p id="bottomTwoFeaturedText"><a href="#">Half Dome Climbing Shoes</a></p>
                     </div>
 
                     <div id="bottomThree">
-                        <asp:Image ID="imgBottomThree" runat="server" ImageUrl="/Assets/greenlandscape.jpg" CssClass="bottomThreeImg" />
-                        <p id="bottomThreeFeaturedText"><a href="#">Featured Product 5</a></p>
+                        <asp:Image ID="imgBottomThree" runat="server" ImageUrl="/Assets/carabinerpromo.png" CssClass="bottomThreeImg" />
+                        <p id="bottomThreeFeaturedText"><a href="#">Unobtainium Carabiner</a></p>
                     </div>
 
                 </div>
