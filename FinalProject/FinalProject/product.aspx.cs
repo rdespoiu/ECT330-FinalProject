@@ -58,6 +58,17 @@ namespace FinalProject
                         }
                     }
 
+                    if (currentProduct.Stock > 0)
+                    {
+
+                        btnAddToCart.Text = "Add To Cart";
+                        btnAddToCart.Command += new CommandEventHandler(AddToCart);
+                        btnAddToCart.CommandArgument = currentProduct.Id.ToString();
+                    } else
+                    {
+                        btnAddToCart.Text = "Out of Stock!";
+                    }
+
                 }
 
             } catch
@@ -67,6 +78,71 @@ namespace FinalProject
             
 
             
+        }
+
+        private void AddToCart(object sender, CommandEventArgs e)
+        {
+
+            int addId = Convert.ToInt32(e.CommandArgument);
+            int custId, cartId;
+            bool hasCart = false;
+            if (Session["LoggedInId"] == null)
+                custId = 1;
+            else
+                custId = Int32.Parse(Session["LoggedInId"].ToString());
+
+            if (Session["CartID"] == null)
+            {
+                using (StoreContent context = new StoreContent())
+                {
+                    var check = (from c in context.Orders
+                                 where c.CustomerID == custId && c.OrderStatus == "Active"
+                                 orderby c.Id descending
+                                 select c).FirstOrDefault();
+                    if (check != null)
+                    {
+                        Session["cartID"] = check.Id;
+                        hasCart = true;
+                    }
+                }
+                if (!hasCart)
+                {
+                    var cart = new Orders();
+                    cart.CustomerID = custId;
+                    cart.OrderStatus = "Active";
+                    cart.OrderDate = DateTime.Now;
+                    cart.SubTotal = 0;
+                    using (StoreContent context = new StoreContent())
+                    {
+                        context.Orders.Add(cart);
+                        context.SaveChanges();
+                        Session["cartID"] = cart.Id;
+                    }
+                }
+            }
+            cartId = Int32.Parse(Session["cartID"].ToString());
+            using (StoreContent context = new StoreContent())
+            {
+                var cart = (from c in context.Orders
+                            where c.Id == cartId
+                            select c).FirstOrDefault();
+                var item = (from p in context.Products
+                            where p.Id == addId
+                            select p).FirstOrDefault();
+                if (item != null)
+                {
+                    var orditem = new OrderItem();
+                    orditem.CustomerID = custId;
+                    orditem.OrderID = cartId;
+                    orditem.ProductID = item.Id;
+                    orditem.Quantity = Int32.Parse(ddlQuantity.SelectedValue); //hard coded, can add function to add multiple items -------- RID: Changed it to allow quantity for the product detail page
+                    context.OrderItem.Add(orditem);
+                    if (cart != null)
+                        cart.SubTotal += Decimal.Parse((item.UnitPrice * Int32.Parse(ddlQuantity.SelectedValue)).ToString()); //Subtotal now reflects unit price * quantity of units  --RID
+                    item.Stock--;   //remove from stock
+                    context.SaveChanges();
+                }
+            }
         }
     }
 }

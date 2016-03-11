@@ -40,7 +40,7 @@
 <asp:Content ID="Content7" ContentPlaceHolderID="cphQuantity" runat="server">
     <!--Quantity options will go here. When a user tries to add to cart, if their chosen quantity > stock, it'll stop them. Otherwise the controls will be implemented at checkout //RID-->
     <asp:DropDownList ID="ddlQuantity" runat="server">
-        <asp:ListItem Text="Choose a Quantity" Value="0"></asp:ListItem>
+
     </asp:DropDownList>
 </asp:Content>
 
