@@ -50,7 +50,7 @@ namespace FinalProject
 
         protected void populateOrderConfirmation()
         {
-            Session["cartID"] = "1003"; //FOR TESTING, DELETE
+
 
             if (Session["cartID"] != null)
             {
