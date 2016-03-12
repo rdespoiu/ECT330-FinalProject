@@ -65,11 +65,22 @@ namespace FinalProject
                                 row.Cells.Add(cell);
 
                                 cell = new TableCell();
-                                cell.Text = product.ProductName;
+                                HyperLink link = new HyperLink();
+                                link.Text = product.ProductName;
+                                link.NavigateUrl = "product.aspx?Id=" + product.Id;
+                                cell.Controls.Add(link);
                                 row.Cells.Add(cell);
 
+                                //If item quantity is > 1, show total price and price of each unit
                                 cell = new TableCell();
-                                cell.Text = "$"+product.UnitPrice.ToString();
+                                if (item.Quantity <= 1)
+                                {
+                                    cell.Text = "$" + product.UnitPrice.ToString("N2");
+                                } else
+                                {
+                                    cell.Text = "$" + (product.UnitPrice * item.Quantity).ToString("N2") + " ($" + product.UnitPrice.ToString("N2") + " ea)";
+                                }
+
                                 row.Cells.Add(cell);
 
                                 cell = new TableCell();
@@ -99,7 +110,10 @@ namespace FinalProject
                                     row.Cells.Add(cell);
 
                                     cell = new TableCell();
-                                    cell.Text = product.ProductName;
+                                    HyperLink link = new HyperLink();
+                                    link.Text = product.ProductName;
+                                    link.NavigateUrl = "product.aspx?Id=" + product.Id;
+                                    cell.Controls.Add(link);
                                     row.Cells.Add(cell);
 
                                     cell = new TableCell();
@@ -132,7 +146,7 @@ namespace FinalProject
                             }
                         }
                         lblCartQuantity.Text = "(" + cartQuantity + " items)";
-                        lblSubtotal.Text += cart.SubTotal.ToString();
+                        lblSubtotal.Text += cart.SubTotal.ToString("N2");
                         
                     }
                 }

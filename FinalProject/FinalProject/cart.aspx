@@ -19,8 +19,8 @@
         <asp:TableRow>
             <asp:TableHeaderCell>Image</asp:TableHeaderCell>
             <asp:TableHeaderCell>Product Name</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Unit Cost</asp:TableHeaderCell>
-            <asp:TableHeaderCell>Units</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Cost</asp:TableHeaderCell>
+            <asp:TableHeaderCell>Quantity</asp:TableHeaderCell>
             <asp:TableHeaderCell>Remove</asp:TableHeaderCell>
         </asp:TableRow>
     </asp:Table>
