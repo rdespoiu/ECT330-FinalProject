@@ -161,7 +161,6 @@ namespace FinalProject
                     cart.SubTotal += Decimal.Parse(item.UnitPrice.ToString());
                 item.Stock--;   //remove from stock
                 context.SaveChanges();
-                }
             }
         }
 
