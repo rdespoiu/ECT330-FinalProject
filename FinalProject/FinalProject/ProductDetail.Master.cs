@@ -67,10 +67,11 @@ namespace FinalProject
                     Session["LoggedInId"] = user.Id.ToString();
                     Session["FirstName"] = user.FirstName;
                     Session["LastName"] = user.LastName;
-                    Session["cartID"] = user.Id.ToString();
 
                     lblInvalidCredentials.Visible = false;
                     updateUserName();
+
+                    instantiateCart(Int32.Parse(Session["LoggedInId"].ToString()));
 
                 }
                 else
@@ -92,6 +93,40 @@ namespace FinalProject
             else
             {
                 Response.Redirect("Search.aspx?query=" + txtSearchBar.Text);
+            }
+        }
+
+        protected void instantiateCart(int userId)
+        {
+            using (StoreContent context = new StoreContent())
+            {
+                var order = (from c in context.Orders
+                             where c.CustomerID == userId && c.OrderStatus == "Active"
+                             select c).FirstOrDefault();
+
+                if (order != null)
+                {
+                    Session["cartID"] = order.Id.ToString();
+                }
+                else
+                {
+
+                    var user = (from c in context.Customer
+                                where c.Id == userId
+                                select c).First();
+
+                    Orders newOrder = context.Orders.Create();
+
+                    newOrder.CustomerID = userId;
+                    newOrder.SubTotal = 0;
+                    newOrder.OrderDate = DateTime.Now;
+                    newOrder.ShippingAddress = user.ShippingAddress;
+                    newOrder.OrderStatus = "Active";
+
+                    context.Orders.Add(newOrder);
+                    context.SaveChanges();
+
+                }
             }
         }
     }
