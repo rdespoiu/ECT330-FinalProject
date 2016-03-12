@@ -103,7 +103,7 @@ namespace FinalProject
             else
                 custId = Int32.Parse(Session["LoggedInId"].ToString());
 
-                if (Session["CartID"] == null)
+                if (Session["cartID"] == null)
             {
                 using (StoreContent context = new StoreContent())
                 {
