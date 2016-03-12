@@ -121,6 +121,8 @@ namespace FinalProject
 
                     context.Orders.Add(newOrder);
                     context.SaveChanges();
+
+                    Session["cartID"] = newOrder.Id.ToString();
                     
                 }
             }

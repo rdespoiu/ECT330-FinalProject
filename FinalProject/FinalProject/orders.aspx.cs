@@ -27,7 +27,7 @@ namespace FinalProject
             using (StoreContent context = new StoreContent())
             {
                 var customerOrders = from c in context.Orders
-                                     where c.CustomerID == userId
+                                     where c.CustomerID == userId && c.OrderStatus == "Complete"
                                      select c;
 
                 if (customerOrders != null)

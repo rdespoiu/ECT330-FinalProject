@@ -85,6 +85,7 @@
     <Content Include="CSS\checkout.css" />
     <Content Include="CSS\ProductDetailMasterStylesheet.css" />
     <Content Include="CSS\ProductsMasterStylesheet.css" />
+    <Content Include="CSS\results.css" />
     <Content Include="editinfo.aspx" />
     <Content Include="hiking.aspx" />
     <Content Include="images\apparel-jacket.jpg" />
@@ -110,6 +111,7 @@
     <Content Include="orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="PopulateStoreData.aspx" />
+    <Content Include="ProcessCreditResult-DELETE.aspx" />
     <Content Include="ProcessCreditResult.aspx" />
     <Content Include="product.aspx" />
     <Content Include="ProductsMaster.Master" />
@@ -197,12 +199,12 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\OrderItem.cs" />
-    <Compile Include="Models\Orders.cs" />
-    <Compile Include="Models\Products.cs" />
-    <Compile Include="Models\StoreContent.cs" />
+    <Compile Include="JS\Models\Category.cs" />
+    <Compile Include="JS\Models\Customer.cs" />
+    <Compile Include="JS\Models\OrderItem.cs" />
+    <Compile Include="JS\Models\Orders.cs" />
+    <Compile Include="JS\Models\Products.cs" />
+    <Compile Include="JS\Models\StoreContent.cs" />
     <Compile Include="orders.aspx.cs">
       <DependentUpon>orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -216,6 +218,13 @@
     </Compile>
     <Compile Include="PopulateStoreData.aspx.designer.cs">
       <DependentUpon>PopulateStoreData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessCreditResult-DELETE.aspx.cs">
+      <DependentUpon>ProcessCreditResult-DELETE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProcessCreditResult-DELETE.aspx.designer.cs">
+      <DependentUpon>ProcessCreditResult-DELETE.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessCreditResult.aspx.cs">
       <DependentUpon>ProcessCreditResult.aspx</DependentUpon>
