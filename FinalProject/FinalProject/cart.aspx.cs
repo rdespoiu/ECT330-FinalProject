@@ -126,6 +126,38 @@ namespace FinalProject
                 }
             }
         }
+        
+        private void RemoveFromCart(object sender, CommandEventArgs e)
+        {
+            int remId = Convert.ToInt32(e.CommandArgument);
+            int cartId = Int32.Parse(Session["cartID"].ToString());
+
+            using (StoreContent context = new StoreContent())
+            {
+                var items = (from o in context.OrderItem
+                            where o.OrderID == cartId && o.ProductID == remId
+                            select o).ToList();
+                var cart = (from c in context.Orders
+                            where c.Id == cartId
+                            select c).FirstOrDefault();
+                var product = (from p in context.Products
+                               where p.Id == remId
+                               select p).First();
+                foreach (OrderItem item in items)
+                {
+                    cart.SubTotal -= (decimal)(item.Quantity * product.UnitPrice);
+                    product.Stock += item.Quantity;
+                    context.OrderItem.Remove(item);
+                    context.SaveChanges();
+                }
+            }
+            Response.Redirect("cart.aspx");
+        }
+
+        protected void Checkout(object sender, EventArgs e)
+        {
+            Response.Redirect("checkout.aspx");
+        }
 
     }
 }
