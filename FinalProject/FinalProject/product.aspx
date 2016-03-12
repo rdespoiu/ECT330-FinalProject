@@ -28,7 +28,6 @@
     <asp:Label ID="lblPrice" runat="server" Text="$1000 -- I'm a price tag!"></asp:Label>
 </asp:Content>
 
-
 <asp:Content ID="Content6" ContentPlaceHolderID="cphSize" runat="server">
     <!--Size options will go here. We may need a size table //RID-->
     <asp:DropDownList ID="ddlSize" runat="server">

@@ -68,9 +68,12 @@ namespace FinalProject
                     if (cart != null)
                     {
 
-                        var orderItems = (from c in context.OrderItem
+                        int itemQty = 0;
+                        bool firstFound = true;
+
+                        var orderItems = from c in context.OrderItem
                                           where c.OrderID == cartId
-                                          select c).ToList();
+                                          select c;
 
                         AppTransId = cart.Id.ToString();
 
@@ -80,7 +83,73 @@ namespace FinalProject
                                            where c.Id == item.ProductID
                                            select c).First();
 
+                            int products = (from c in context.OrderItem
+                                            where c.OrderID == cartId && c.ProductID == product.Id
+                                            select c).Count();
 
+                            if (products == 1)
+                            {
+
+                                TableRow row = new TableRow();
+                                TableCell cell;
+
+                                cell = new TableCell();
+                                cell.Text = product.ProductName;
+                                row.Cells.Add(cell);
+
+                                cell = new TableCell();
+                                cell.Text = "$" + (product.UnitPrice * item.Quantity).ToString("N2");
+                                row.Cells.Add(cell);
+
+                                cell = new TableCell();
+                                cell.Text = item.Quantity.ToString();
+                                row.Cells.Add(cell);
+
+                                tblOrderConfirmation.Rows.Add(row);
+
+                                totalPrice += Decimal.Parse((product.UnitPrice * item.Quantity).ToString());
+
+                            } else
+                            {
+                                itemQty += item.Quantity;
+
+                                TableRow row = new TableRow();
+                                TableCell cell;
+
+                                if (firstFound)
+                                {
+                                    cell = new TableCell();
+                                    cell.Text = product.ProductName;
+                                    row.Cells.Add(cell);
+
+                                    cell = new TableCell();
+                                    cell.Text = "$" + (product.UnitPrice * item.Quantity).ToString("N2");
+                                    row.Cells.Add(cell);
+
+                                    cell = new TableCell();
+                                    cell.Text = item.Quantity.ToString();
+                                    row.Cells.Add(cell);
+
+                                    tblOrderConfirmation.Rows.Add(row);
+
+                                    totalPrice += Decimal.Parse((product.UnitPrice * item.Quantity).ToString());
+
+                                    firstFound = false;
+                                } else
+                                {
+                                    TableCell c = tblOrderConfirmation.FindControl(product.ProductName.ToString()) as TableCell;
+                                    c.Text = itemQty.ToString();
+                                }
+                            }
+                        }                       
+
+                        /*
+                        foreach (OrderItem item in orderItems)
+                        {
+                            var product = (from c in context.Products
+                                           where c.Id == item.ProductID
+                                           select c).First();
+                            
                             TableRow row = new TableRow();
                             TableCell cell;
 
@@ -89,7 +158,7 @@ namespace FinalProject
                             row.Cells.Add(cell);
 
                             cell = new TableCell();
-                            cell.Text = (product.UnitPrice * item.Quantity).ToString();
+                            cell.Text = "$" + (product.UnitPrice * item.Quantity).ToString("N2");
                             row.Cells.Add(cell);
 
                             cell = new TableCell();
@@ -99,12 +168,12 @@ namespace FinalProject
                             tblOrderConfirmation.Rows.Add(row);
 
                             totalPrice += Decimal.Parse((product.UnitPrice * item.Quantity).ToString());
-                        }
+                        }*/
                     }
                 }
 
                 AppTransAmount = totalPrice.ToString();
-                lblTotal.Text = "Total: $" + totalPrice.ToString();
+                lblTotal.Text = "Total: $" + totalPrice.ToString("N2");
 
             }
             

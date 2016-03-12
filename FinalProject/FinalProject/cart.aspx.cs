@@ -12,6 +12,17 @@ namespace FinalProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (Session["LoggedInId"] == null)
+            {
+                lblCart.Text = "Please sign in or register to view your cart!";
+                lblCart.ForeColor = System.Drawing.Color.Red;
+
+                lblCartQuantity.Text = null;
+
+                return;
+            }
+
             //Test cart     Session["cartID"] = 2;
             if (Session["cartID"] == null)
             {

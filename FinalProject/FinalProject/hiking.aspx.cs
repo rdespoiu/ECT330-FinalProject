@@ -382,6 +382,14 @@ namespace FinalProject
         
         private void AddToCart(object sender, CommandEventArgs e)
         {
+
+            if (Session["LoggedInId"] == null)
+            {
+                lblPageName.Text = "Please sign in or register to add items!";
+                lblPageName.ForeColor = System.Drawing.Color.Red;
+                return;
+            }
+
             int addId = Convert.ToInt32(e.CommandArgument);
             int custId, cartId;
             bool hasCart = false;
