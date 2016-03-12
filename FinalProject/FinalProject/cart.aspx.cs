@@ -69,7 +69,7 @@ namespace FinalProject
                                 row.Cells.Add(cell);
 
                                 cell = new TableCell();
-                                cell.Text = product.UnitPrice.ToString();
+                                cell.Text = "$"+product.UnitPrice.ToString();
                                 row.Cells.Add(cell);
 
                                 cell = new TableCell();
