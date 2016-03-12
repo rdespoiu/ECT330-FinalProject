@@ -62,7 +62,7 @@
 
                     <div id="rightFeatured">;
                         <asp:Image ID="imgRightFeatured" runat="server" ImageUrl="/Assets/hiking.jpg" CssClass="rightFeaturedImg" />
-                        <p id="rightFeaturedText"><a href="hiking.aspx">Ditch your old hiking equipment!</a></p>
+                        <p id="rightFeaturedText"><a href="hiking.aspx">Ditch your old hiking equipment</a></p>
                     </div>
                 </div>
                 

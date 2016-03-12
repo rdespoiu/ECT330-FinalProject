@@ -24,6 +24,7 @@ namespace FinalProject
                 btnCheckout.Enabled = true;
                 int cartId = Int32.Parse(Session["cartID"].ToString());
                 int cartQuantity = 0;
+
                 using (StoreContent context = new StoreContent())
                 {
                     var cart = (from c in context.Orders
