@@ -17,9 +17,11 @@ namespace FinalProject
             {
                 lblCartQuantity.Text = "(0 items)";
                 lblSubtotal.Text += "0.00";
+                btnCheckout.Enabled = false;
             }
             else
             {
+                btnCheckout.Enabled = true;
                 int cartId = Int32.Parse(Session["cartID"].ToString());
                 int cartQuantity = 0;
                 using (StoreContent context = new StoreContent())
