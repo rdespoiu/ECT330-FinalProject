@@ -137,8 +137,20 @@ namespace FinalProject
                                     firstFound = false;
                                 } else
                                 {
-                                    TableCell c = tblOrderConfirmation.FindControl(product.ProductName.ToString()) as TableCell;
-                                    c.Text = itemQty.ToString();
+                                    TableCell c = tblOrderConfirmation.FindControl(product.ProductName) as TableCell;
+
+                                    if (c != null)
+                                    {
+                                        c.Text = itemQty.ToString();
+                                    } else
+                                    {
+                                        
+                                        lblPageName.Text = product.ProductName;
+                                    }
+
+                                    TableRow myRow = tblOrderConfirmation.Rows[-1];
+                                    
+
                                 }
                             }
                         }                       
