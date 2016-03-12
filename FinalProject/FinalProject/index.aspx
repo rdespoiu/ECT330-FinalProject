@@ -60,7 +60,7 @@
                         <p id="leftFeaturedText"><a href="climbing.aspx">Send that route with all new climbing gear!</a></p>
                     </div>
 
-                    <div id="rightFeatured">
+                    <div id="rightFeatured">;
                         <asp:Image ID="imgRightFeatured" runat="server" ImageUrl="/Assets/hiking.jpg" CssClass="rightFeaturedImg" />
                         <p id="rightFeaturedText"><a href="hiking.aspx">Ditch your old hiking equipment!</a></p>
                     </div>
@@ -68,18 +68,18 @@
                 
                 <div id="bottom">
                     <div id="bottomOne">
-                        <asp:Image ID="imgBottomOne" runat="server" ImageUrl="/Assets/sleepingbagpromo.jpg" CssClass="bottomOneImg" />
-                        <p id="bottomOneFeaturedText"><a href="#">UltraTherm Sleeping Bag</a></p>
+                        <asp:Image ID="imgBottomOne" runat="server" ImageUrl="/Assets/sleepingbagpromo.png" CssClass="bottomOneImg" />
+                        <p id="bottomOneFeaturedText"><a href="product.aspx?Id=10">UltraTherm Sleeping Bag</a></p>
                     </div>
 
                     <div id="bottomTwo">
-                        <asp:Image ID="imgBottomTwo" runat="server" ImageUrl="/Assets/climbingshoepromo.jpg" CssClass="bottomTwoImg" />
-                        <p id="bottomTwoFeaturedText"><a href="#">Half Dome Climbing Shoes</a></p>
+                        <asp:Image ID="imgBottomTwo" runat="server" ImageUrl="/Assets/climbingshoepromo.png" CssClass="bottomTwoImg" />
+                        <p id="bottomTwoFeaturedText"><a href="product.aspx?Id=1">Half Dome Climbing Shoes</a></p>
                     </div>
 
                     <div id="bottomThree">
                         <asp:Image ID="imgBottomThree" runat="server" ImageUrl="/Assets/carabinerpromo.png" CssClass="bottomThreeImg" />
-                        <p id="bottomThreeFeaturedText"><a href="#">Unobtainium Carabiner</a></p>
+                        <p id="bottomThreeFeaturedText"><a href="product.aspx?Id=3">Unobtainium Carabiner</a></p>
                     </div>
 
                 </div>

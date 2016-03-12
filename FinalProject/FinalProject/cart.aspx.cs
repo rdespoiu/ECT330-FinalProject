@@ -69,8 +69,8 @@ namespace FinalProject
                                 removeFromCart.Text = "Remove From Cart";
                                 removeFromCart.ID = product.Id.ToString(); //Will use this when adding the onClick event handler so that it can add this product ID to the user's cart
                                 removeFromCart.CssClass = "addToCartButton";
-                                //removeFromCart.Command += new CommandEventHandler(RemoveFromCart);
-                                //removeFromCart.CommandArgument = product.Id.ToString();
+                                removeFromCart.Command += new CommandEventHandler(RemoveFromCart);
+                                removeFromCart.CommandArgument = product.Id.ToString();
                                 cell.Controls.Add(removeFromCart);
                                 row.Cells.Add(cell);
 
@@ -104,8 +104,8 @@ namespace FinalProject
                                     removeFromCart.Text = "Remove From Cart";
                                     removeFromCart.ID = product.Id.ToString(); //Will use this when adding the onClick event handler so that it can add this product ID to the user's cart
                                     removeFromCart.CssClass = "addToCartButton";
-                                    //removeFromCart.Command += new CommandEventHandler(RemoveFromCart);
-                                    //removeFromCart.CommandArgument = product.Id.ToString();
+                                    removeFromCart.Command += new CommandEventHandler(RemoveFromCart);
+                                    removeFromCart.CommandArgument = product.Id.ToString();
                                     cell.Controls.Add(removeFromCart);
                                     row.Cells.Add(cell);
                                     tblCart.Rows.Add(row);

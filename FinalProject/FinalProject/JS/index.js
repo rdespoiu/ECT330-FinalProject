@@ -9,15 +9,15 @@
     });
 
     $("#bottomOne").click(function (event) {
-        window.location.href = "#"; /*Will redirect to the product's page*/
+        window.location.href = "product.aspx?Id=10"; /*Will redirect to the product's page*/
     });
 
     $("#bottomTwo").click(function (event) {
-        window.location.href = "#"; /*Will redirect to the product's page*/
+        window.location.href = "product.aspx?Id=1"; /*Will redirect to the product's page*/
     });
 
     $("#bottomThree").click(function (event) {
-        window.location.href = "#"; /*Will redirect to the product's page*/
+        window.location.href = "product.aspx?Id=3"; /*Will redirect to the product's page*/
     });
 
     $("#logo").click(function (event) {

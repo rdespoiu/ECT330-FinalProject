@@ -191,13 +191,15 @@ a:hover {
 
 #bottomOneFeaturedText {
     position: absolute;
-    bottom: 0;
-    color: white;
+    bottom: -9%;
+    left: 2%;
+    color: black;
     padding: 5px;
 }
 
 #bottomOneFeaturedText a {
-    color: white;
+    color: black;
+    font-size: 30px;
     text-decoration: none;
 }
 
@@ -223,13 +225,15 @@ a:hover {
 
 #bottomTwoFeaturedText {
     position: absolute;
-    bottom: 0;
+    bottom: -9%;
+    right: 37%;
     color: white;
     padding: 5px;
 }
 
 #bottomTwoFeaturedText a {
-    color: white;
+    color: black;
+    font-size: 30px;
     text-decoration: none;
 }
 
@@ -253,13 +257,15 @@ a:hover {
 
 #bottomThreeFeaturedText {
     position: absolute;
-    bottom: 0;
+    bottom: -9%;
+    right: 5%;
     color: white;
     padding: 5px;
 }
 
 #bottomThreeFeaturedText a {
-    color: white;
+    color: black;
+    font-size: 30px;
     text-decoration: none;
 }
 
