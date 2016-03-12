@@ -128,6 +128,7 @@ namespace FinalProject
 
                 }
             }
+            Response.Redirect(Request.RawUrl);
         }
 
     }
