@@ -44,11 +44,6 @@
                 <asp:TableCell><b>Cost</b></asp:TableCell>
                 <asp:TableCell><b>Quantity</b></asp:TableCell>
             </asp:TableHeaderRow>
-            <asp:TableRow>
-                <asp:TableCell>Sample Product</asp:TableCell>
-                <asp:TableCell>$49.99</asp:TableCell>
-                <asp:TableCell>2</asp:TableCell>
-            </asp:TableRow>
         </asp:Table>    
     </div>
 
@@ -60,7 +55,7 @@
     <div id="checkoutConfirmBottom">
 
         <div id="checkoutConfirmBottomLeft">
-            <asp:Label ID="lblTotal" runat="server" Text="$49.99"></asp:Label>
+            <asp:Label ID="lblTotal" runat="server"></asp:Label>
         </div>
 
         <div id="checkoutConfirmBottomRight">
