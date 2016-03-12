@@ -435,7 +435,14 @@ namespace FinalProject
                 var item = (from p in context.Products
                             where p.Id == addId
                             select p).FirstOrDefault();
-                if (item != null)
+                var checkItem = (from c in context.OrderItem
+                                 where c.ProductID == item.Id && c.OrderID == cart.Id
+                                 select c).FirstOrDefault();
+                if (checkItem != null)
+                {
+                    checkItem.Quantity++;
+                }
+                else
                 {
                     var orditem = new OrderItem();
                     orditem.CustomerID = custId;
@@ -443,11 +450,11 @@ namespace FinalProject
                     orditem.ProductID = item.Id;
                     orditem.Quantity = 1; //hard coded, can add function to add multiple items
                     context.OrderItem.Add(orditem);
-                    if (cart != null)
-                        cart.SubTotal += Decimal.Parse(item.UnitPrice.ToString());
-                    item.Stock--;   //remove from stock
-                    context.SaveChanges();
                 }
+                if (cart != null)
+                    cart.SubTotal += Decimal.Parse(item.UnitPrice.ToString());
+                item.Stock--;   //remove from stock
+                context.SaveChanges();
             }
         }
 
