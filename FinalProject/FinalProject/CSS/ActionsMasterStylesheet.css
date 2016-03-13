@@ -316,7 +316,9 @@ table {
      justify-content: space-around;
 }
 .summary{
+     text-align: center;
      justify-content: space-around;
      padding-left: 10%;
      padding-right: 10%;
+     
 }
