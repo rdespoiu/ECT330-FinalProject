@@ -17,6 +17,19 @@
     </div>
     <br />
     <div class="summary">
+        <asp:Table ID="tblAboutUs" GridLines="None" HorizontalAlign="Justify" runat="server">
+            <asp:TableRow>
+                <asp:TableCell>
+                    <p>
+                        We want all our customers to feel the thrill of reaching the treeline made possible with our products and strive to do so again, and again.
+                        So follow us on Twitter to see some of our customer tweets and retweets or feel free to contact us at at weareabovetreeline@gmail.com.
+                    </p>
+                </asp:TableCell>
+                <asp:TableCell>
+                    <!-- Twitter card/button/trends -->
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
     <p>
         We want all our customers to feel the thrill of reaching the treeline made possible with our products and strive to do so again, and again.
         So follow us on Twitter to see some of our customer tweets and retweets or feel free to contact us at at weareabovetreeline@gmail.com.

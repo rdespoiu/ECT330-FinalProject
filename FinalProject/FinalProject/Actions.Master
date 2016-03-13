@@ -34,6 +34,7 @@
         }
     </script>
     <script>
+        //this script is for twitter use....still figuring out how to call it
         window.twttr = (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0],
               t = window.twttr || {};
