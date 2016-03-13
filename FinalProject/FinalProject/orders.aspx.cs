@@ -48,7 +48,7 @@ namespace FinalProject
                         row.Cells.Add(cell);
 
                         cell = new TableCell();
-                        cell.Text = order.SubTotal.ToString("N2");
+                        cell.Text = "$" + order.SubTotal.ToString("N2");
                         row.Cells.Add(cell);
 
                         cell = new TableCell();

@@ -73,7 +73,7 @@
                             </asp:Panel>                            
                         </div>
                     </li>
-                    <li><a href="cart.aspx">Shopping Cart</a></li> 
+                    <li><a href="cart.aspx"><asp:Label ID="lblShoppingCart" runat="server" Text="Shopping Cart"></asp:Label></a></li> 
                     <li><asp:TextBox runat="server" ID="txtSearchBar" Placeholder="Search" CssClass="searchBox"></asp:TextBox></li>
                     <li><asp:Button runat="server" ID="btnSearch" Text="Search" OnClick="btnSearch_Click" CssClass="btnSearch" /></li>
                 </ul>

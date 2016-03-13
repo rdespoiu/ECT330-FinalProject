@@ -30,6 +30,7 @@ namespace FinalProject
 
         protected void RedirectUser(object sender, EventArgs e)
         {
+
             //Assign the values for the properties we need to pass to the service
             String AppId = ConfigurationManager.AppSettings["CreditAppId"];
             String SharedKey = ConfigurationManager.AppSettings["CreditAppSharedKey"];
@@ -105,6 +106,10 @@ namespace FinalProject
                 AppTransAmount = totalPrice.ToString();
                 lblTotal.Text = "Total: $" + totalPrice.ToString("N2");
 
+                if (Int32.Parse(AppTransAmount) <= 0)
+                {
+                    Response.Redirect("index.aspx");
+                }
             }
             
 

@@ -128,6 +128,8 @@ namespace FinalProject
             cartId = Int32.Parse(Session["cartID"].ToString());
             using (StoreContent context = new StoreContent())
             {
+                int quantityToAdd;
+
                 var cart = (from c in context.Orders
                             where c.Id == cartId
                             select c).FirstOrDefault();
@@ -140,32 +142,42 @@ namespace FinalProject
 
                 if (checkItem != null)
                 {
-                    checkItem.Quantity++;
-                } else                
+                    checkItem.Quantity = checkItem.Quantity + Int32.Parse(ddlQuantity.SelectedValue);
+                    quantityToAdd = Int32.Parse(ddlQuantity.SelectedValue);
+                }
+                else
                 {
-                    int quantityToAdd;
+                    
 
                     var orditem = new OrderItem();
                     orditem.CustomerID = custId;
                     orditem.OrderID = cartId;
                     orditem.ProductID = item.Id;
 
-                    if (Int32.Parse(ddlQuantity.SelectedValue.ToString()) > 1) {
-                        quantityToAdd = Int32.Parse(ddlQuantity.SelectedValue.ToString());
+                    if (Int32.Parse(ddlQuantity.SelectedValue) > 1)
+                    {
+                        quantityToAdd = Int32.Parse(ddlQuantity.SelectedValue);
                         orditem.Quantity = quantityToAdd;
-                    } else
+                    }
+                    else
                     {
                         quantityToAdd = 1;
                         orditem.Quantity = Int32.Parse(ddlQuantity.SelectedValue);
                     }
 
                     context.OrderItem.Add(orditem);
-                    if (cart != null)
-                        cart.SubTotal += Decimal.Parse((item.UnitPrice * Int32.Parse(ddlQuantity.SelectedValue)).ToString()); //Subtotal now reflects unit price * quantity of units  --RID
-                    item.Stock = item.Stock - quantityToAdd;   //remove from stock
-                    context.SaveChanges();
                 }
+
+                if (cart != null)
+                {
+                    cart.SubTotal += Decimal.Parse((item.UnitPrice * Int32.Parse(ddlQuantity.SelectedValue)).ToString()); //Subtotal now reflects unit price * quantity of units  --RID
+                }
+                item.Stock = item.Stock - quantityToAdd;   //remove from stock
+                context.SaveChanges();
+                
             }
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
 }
