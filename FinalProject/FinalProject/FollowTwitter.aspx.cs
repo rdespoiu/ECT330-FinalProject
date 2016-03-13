@@ -14,9 +14,5 @@ namespace FinalProject
 
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            //Label1.Text = "You clicked the link button"; THIS WAS THROWING AN ERROR, LABEL DOESNT EXIST?
-        }
     }
 }
