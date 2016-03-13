@@ -29,6 +29,7 @@ namespace FinalProject
                                           select c).FirstOrDefault();
 
                     //ADD IMAGE HERE imgProductImage
+                    
                     imgProduct.ImageUrl = currentProduct.image;
                     lblProductName.Text = currentProduct.ProductName;
                     lblProductDescription.Text = currentProduct.ProductDescription;

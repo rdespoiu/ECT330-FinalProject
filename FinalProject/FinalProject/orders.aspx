@@ -12,7 +12,11 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphTop" runat="server">
     <asp:Table ID="tblOrders" runat="server">
-        
+        <asp:TableHeaderRow>
+            <asp:TableCell><b>Order Date</b></asp:TableCell>
+            <asp:TableCell><b>Total Price</b></asp:TableCell>
+            <asp:TableCell><b>Order Status</b></asp:TableCell>
+        </asp:TableHeaderRow>
     </asp:Table>
 </asp:Content>
 

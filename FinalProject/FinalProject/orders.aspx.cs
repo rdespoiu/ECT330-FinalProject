@@ -34,6 +34,30 @@ namespace FinalProject
                 {
                     foreach (Orders order in customerOrders)
                     {
+
+                        TableRow row = new TableRow();
+                        TableCell cell;
+                        HyperLink link;
+
+                        cell = new TableCell();
+                        link = new HyperLink();
+                        link.Text = order.OrderDate.ToString();
+                        link.NavigateUrl = "orderdetail.aspx?Id=" + order.Id;
+                        cell.Controls.Add(link);
+                        row.Cells.Add(cell);
+
+                        cell = new TableCell();
+                        cell.Text = order.SubTotal.ToString("N2");
+                        row.Cells.Add(cell);
+
+                        cell = new TableCell();
+                        cell.Text = order.OrderStatus;
+                        row.Cells.Add(cell);
+
+                        tblOrders.Rows.Add(row);
+
+
+                        /*
                         var orderItems = from c in context.OrderItem
                                          where c.OrderID == order.Id
                                          select c;
@@ -79,7 +103,7 @@ namespace FinalProject
                             row.Cells.Add(cell);
 
                             tblOrders.Rows.Add(row);
-                        }
+                        }*/
                     }
                 } else
                 {
