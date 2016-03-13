@@ -46,3 +46,13 @@ C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\Microso
 C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
 C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.dll
 C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\LinqToTwitter.AspNet.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\LinqToTwitter.net.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.Core.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.Interfaces.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.Linq.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.PlatformServices.dll
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.Core.xml
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.Interfaces.xml
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.Linq.xml
+C:\Users\carde\Desktop\ECT330-FinalProject\FinalProject\FinalProject\bin\System.Reactive.PlatformServices.xml

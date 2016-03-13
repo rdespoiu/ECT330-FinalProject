@@ -308,3 +308,15 @@ table {
 .btnSearch:hover {
     opacity: 1.0;
 }
+
+.aboutUs{
+    font-style: italic;
+}
+.contactLinks{
+     justify-content: space-around;
+}
+.summary{
+     justify-content: space-around;
+     padding-left: 10%;
+     padding-right: 10%;
+}
