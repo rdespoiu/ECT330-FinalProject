@@ -38,6 +38,7 @@ namespace FinalProject
                     {
                         if (Page.IsValid)
                         {
+                            //add billing fields too
                             customer.FirstName = txtFirstName.Text;
                             customer.LastName = txtLastName.Text;
                             customer.BillingAddress = txtBillingAddress.Text;
