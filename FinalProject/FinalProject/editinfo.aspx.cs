@@ -42,9 +42,9 @@ namespace FinalProject
                             customer.LastName = txtLastName.Text;
                             customer.BillingAddress = txtBillingAddress.Text;
                             customer.ShippingAddress = txtShippingAddress.Text;
-                            customer.City = txtCity.Text;
-                            customer.Zip = Int32.Parse(txtZip.Text);
-                            customer.State = ddlState.SelectedValue;
+                            customer.City = txtShippingCity.Text;
+                            customer.Zip = Int32.Parse(txtShippingZip.Text);
+                            customer.State = ddlShippingState.SelectedValue;
                             customer.email = txtEmail.Text;
                             customer.UserName = txtUsername.Text;
 
@@ -87,9 +87,9 @@ namespace FinalProject
                         txtLastName.Text = customer.LastName;
                         txtBillingAddress.Text = customer.BillingAddress;
                         txtShippingAddress.Text = customer.ShippingAddress;
-                        txtCity.Text = customer.City;
-                        txtZip.Text = customer.Zip.ToString();
-                        ddlState.SelectedValue = customer.State;
+                        txtShippingCity.Text = customer.City;
+                        txtShippingZip.Text = customer.Zip.ToString();
+                        ddlShippingState.SelectedValue = customer.State;
                         txtEmail.Text = customer.email;
                         txtUsername.Text = customer.UserName;
 
@@ -107,7 +107,8 @@ namespace FinalProject
                                 , "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"};
             foreach (String state in states)
             {
-                ddlState.Items.Add(new ListItem(state));
+                ddlShippingState.Items.Add(new ListItem(state));
+                ddlBillingState.Items.Add(new ListItem(state));
             }
         }
     }

@@ -25,7 +25,7 @@ namespace FinalProject
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            /*
+            
             if (Page.IsValid)
             {
 
@@ -38,14 +38,17 @@ namespace FinalProject
 
                     if (checkUsername == null)
                     {
+
+                        //ONCE DATABASE IS UPDATED, ADD BILLING INFO TOO
+
                         Customer newCustomer = content.Customer.Create();
                         newCustomer.FirstName = txtFirstName.Text;
                         newCustomer.LastName = txtLastName.Text;
                         newCustomer.BillingAddress = txtBillingAddress.Text;
                         newCustomer.ShippingAddress = txtShippingAddress.Text;
-                        newCustomer.City = txtCity.Text;
-                        newCustomer.Zip = Int32.Parse(txtZip.Text);
-                        newCustomer.State = ddlState.SelectedItem.ToString();
+                        newCustomer.City = txtShippingCity.Text;
+                        newCustomer.Zip = Int32.Parse(txtShippingZip.Text);
+                        newCustomer.State = ddlShippingState.SelectedItem.ToString();
                         newCustomer.email = txtEmail.Text;
                         newCustomer.UserName = txtUsername.Text;
                         
@@ -76,7 +79,7 @@ namespace FinalProject
 
                     
                 }
-            }*/
+            }
         }
 
         protected void populateStates()
@@ -89,6 +92,7 @@ namespace FinalProject
             foreach (String state in states)
             {
                 ddlShippingState.Items.Add(new ListItem(state));
+                ddlBillingState.Items.Add(new ListItem(state));
             }
         }
     }
