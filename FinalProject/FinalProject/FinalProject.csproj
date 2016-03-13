@@ -83,6 +83,7 @@
     <Content Include="climbing.aspx" />
     <Content Include="CSS\ActionsMasterStylesheet.css" />
     <Content Include="CSS\checkout.css" />
+    <Content Include="CSS\orderdetail.css" />
     <Content Include="CSS\ProductDetailMasterStylesheet.css" />
     <Content Include="CSS\ProductsMasterStylesheet.css" />
     <Content Include="CSS\results.css" />
@@ -108,6 +109,7 @@
     <Content Include="index.aspx" />
     <Content Include="CSS\index.css" />
     <Content Include="JS\index.js" />
+    <Content Include="orderdetail.aspx" />
     <Content Include="orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="PopulateStoreData.aspx" />
@@ -205,6 +207,13 @@
     <Compile Include="JS\Models\Orders.cs" />
     <Compile Include="JS\Models\Products.cs" />
     <Compile Include="JS\Models\StoreContent.cs" />
+    <Compile Include="orderdetail.aspx.cs">
+      <DependentUpon>orderdetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="orderdetail.aspx.designer.cs">
+      <DependentUpon>orderdetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="orders.aspx.cs">
       <DependentUpon>orders.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
