@@ -89,7 +89,7 @@ namespace FinalProject
 
                     if (orderTotal != null)
                     {
-                        lblOrder.Text = "Order Date: " + orderTotal.OrderDate.ToString();
+                        lblOrder.Text = "Order Date: " + orderTotal.OrderDate.ToString("MM/dd/yyyy");
                         lblTotal.Text = orderTotal.SubTotal.ToString("N2");
                     }
 
@@ -130,6 +130,11 @@ namespace FinalProject
 
 
             }
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("orders.aspx");
         }
     }
 }

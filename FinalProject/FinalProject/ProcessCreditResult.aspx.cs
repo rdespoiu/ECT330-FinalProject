@@ -173,6 +173,7 @@ namespace FinalProject
                             select c).FirstOrDefault();
 
                 order.OrderStatus = "Complete";
+                order.OrderDate = DateTime.Now;
 
                 Orders newOrder = context.Orders.Create();
 

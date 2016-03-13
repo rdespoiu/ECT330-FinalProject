@@ -28,6 +28,7 @@ namespace FinalProject
             {
                 var customerOrders = from c in context.Orders
                                      where c.CustomerID == userId && c.OrderStatus == "Complete"
+                                     orderby c.OrderDate descending
                                      select c;
 
                 if (customerOrders != null)
@@ -41,7 +42,7 @@ namespace FinalProject
 
                         cell = new TableCell();
                         link = new HyperLink();
-                        link.Text = order.OrderDate.ToString();
+                        link.Text = order.OrderDate.ToString("MM/dd/yyyy");
                         link.NavigateUrl = "orderdetail.aspx?Id=" + order.Id;
                         cell.Controls.Add(link);
                         row.Cells.Add(cell);
