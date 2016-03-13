@@ -1,4 +1,5 @@
-﻿using FinalProject.Models;
+﻿using FinalProject.JS.Models;
+using FinalProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,17 +39,33 @@ namespace FinalProject
 
                     if (checkUsername == null)
                     {
-
-                        //ONCE DATABASE IS UPDATED, ADD BILLING INFO TOO
-
+                        
                         Customer newCustomer = content.Customer.Create();
                         newCustomer.FirstName = txtFirstName.Text;
                         newCustomer.LastName = txtLastName.Text;
-                        newCustomer.BillingAddress = txtBillingAddress.Text;
-                        newCustomer.ShippingAddress = txtShippingAddress.Text;
-                        newCustomer.City = txtShippingCity.Text;
-                        newCustomer.Zip = Int32.Parse(txtShippingZip.Text);
-                        newCustomer.State = ddlShippingState.SelectedItem.ToString();
+
+                        //adding different type of addresses
+
+                        //billing first
+                        TypeofAddress add = new TypeofAddress();
+                        add.UserName = txtUsername.Text;
+                        add.typeAdd = "Billing";
+                        add.Address = txtBillingAddress.Text;
+                        add.City = txtBillingCity.Text;
+                        add.State = ddlBillingState.SelectedItem.ToString();
+                        add.Zip = Int32.Parse(txtBillingZip.Text);
+                        content.Address.Add(add);
+
+                        //shipping address now
+                        add = new TypeofAddress();
+                        add.UserName = txtUsername.Text;
+                        add.typeAdd = "Shipping";
+                        add.Address = txtShippingAddress.Text;
+                        add.City = txtShippingCity.Text;
+                        add.State = ddlShippingState.SelectedItem.ToString();
+                        add.Zip = Int32.Parse(txtShippingZip.Text);
+                        content.Address.Add(add);
+
                         newCustomer.email = txtEmail.Text;
                         newCustomer.UserName = txtUsername.Text;
                         

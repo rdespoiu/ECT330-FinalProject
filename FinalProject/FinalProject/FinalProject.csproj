@@ -239,6 +239,7 @@
     <Compile Include="JS\Models\Orders.cs" />
     <Compile Include="JS\Models\Products.cs" />
     <Compile Include="JS\Models\StoreContent.cs" />
+    <Compile Include="JS\Models\TypeofAddress.cs" />
     <Compile Include="orderdetail.aspx.cs">
       <DependentUpon>orderdetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

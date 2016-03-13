@@ -10,11 +10,14 @@ namespace FinalProject.Models
         public int Id { get; set; }
         public String FirstName { get; set; }
         public String LastName { get; set; }
-        public String BillingAddress { get; set; }
-        public String ShippingAddress { get; set; }
-        public String City { get; set; }
-        public String State { get; set; }
-        public int Zip { get; set; }
+
+        //replaced with Type of Address table
+        /*      public String BillingAddress { get; set; }
+                public String ShippingAddress { get; set; }
+                public String City { get; set; }
+                public String State { get; set; }
+                public int Zip { get; set; }
+                */
         public String email { get; set; }
         public String UserName { get; set; }
         public String Password { get; set; }

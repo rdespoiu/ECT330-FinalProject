@@ -14,6 +14,6 @@ namespace FinalProject.Models
         public Double UnitPrice { get; set; }
         public String image { get; set; }
         public int CategoryID { get; set; }
-        public bool Featured { get; set; }
+
     }
 }

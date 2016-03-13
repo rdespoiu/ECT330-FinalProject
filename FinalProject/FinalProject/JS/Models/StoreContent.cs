@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinalProject.JS.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace FinalProject.Models
         public virtual DbSet<OrderItem> OrderItem { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<TypeofAddress> Address { get; set; }
 
     }
 }

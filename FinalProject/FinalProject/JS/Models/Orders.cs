@@ -9,7 +9,6 @@ namespace FinalProject.Models
     {
         public int Id { get; set; }
         public int CustomerID { get; set; }
-        public int OrderItemID { get; set; }
         public Decimal SubTotal { get; set; }
         public String ShippingAddress { get; set; }
         public DateTime OrderDate { get; set; }

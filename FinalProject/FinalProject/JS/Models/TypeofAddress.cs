@@ -5,7 +5,7 @@ using System.Web;
 
 namespace FinalProject.JS.Models
 {
-    public class TypeodAddress
+    public class TypeofAddress
     {
         public int Id { get; set; }
         public String UserName { get; set; }

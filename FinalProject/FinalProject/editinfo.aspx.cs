@@ -1,4 +1,5 @@
-﻿using FinalProject.Models;
+﻿using FinalProject.JS.Models;
+using FinalProject.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -41,16 +42,31 @@ namespace FinalProject
                             //add billing fields too
                             customer.FirstName = txtFirstName.Text;
                             customer.LastName = txtLastName.Text;
-                            customer.BillingAddress = txtBillingAddress.Text;
-                            customer.ShippingAddress = txtShippingAddress.Text;
-                            customer.City = txtShippingCity.Text;
-                            customer.Zip = Int32.Parse(txtShippingZip.Text);
-                            customer.State = ddlShippingState.SelectedValue;
+
+                            //billing address
+                            TypeofAddress add = new TypeofAddress();
+                            add.UserName = txtUsername.Text;
+                            add.typeAdd = "Billing";
+                            add.Address = txtBillingAddress.Text;
+                            add.City = txtBillingCity.Text;
+                            add.State = ddlBillingState.SelectedItem.ToString();
+                            add.Zip = Int32.Parse(txtBillingZip.Text);
+                            context.Address.Add(add);
+
+                            //shipping address
+                            add = new TypeofAddress();
+                            add.UserName = txtUsername.Text;
+                            add.typeAdd = "Shipping";
+                            add.Address = txtShippingAddress.Text;
+                            add.City = txtShippingCity.Text;
+                            add.State = ddlShippingState.SelectedItem.ToString();
+                            add.Zip = Int32.Parse(txtShippingZip.Text);
+                            context.Address.Add(add);
+
                             customer.email = txtEmail.Text;
                             customer.UserName = txtUsername.Text;
 
                             //Hash time!!
-                            //customer.Password = txtPass1.Text;
                             customer.Password = FinalProject.SecuredPasswordHash.GenerateHash(txtPass1.Text);
 
                             if (chkNewsletter.Checked)
@@ -86,11 +102,25 @@ namespace FinalProject
                     {
                         txtFirstName.Text = customer.FirstName;
                         txtLastName.Text = customer.LastName;
-                        txtBillingAddress.Text = customer.BillingAddress;
-                        txtShippingAddress.Text = customer.ShippingAddress;
-                        txtShippingCity.Text = customer.City;
-                        txtShippingZip.Text = customer.Zip.ToString();
-                        ddlShippingState.SelectedValue = customer.State;
+
+                        //show billing address
+                        var billAdd = (from c in context.Address
+                                       where c.UserName == txtUsername.Text && c.typeAdd == "Billing"
+                                       select c).FirstOrDefault();
+                        txtBillingAddress.Text = billAdd.Address;
+                        txtBillingCity.Text = billAdd.City;
+                        ddlBillingState.SelectedValue = billAdd.State;
+                        txtBillingZip.Text = billAdd.Zip.ToString();
+
+                        //show shipping address
+                        var shipAdd = (from c in context.Address
+                                       where c.UserName == txtUsername.Text && c.typeAdd == "Shipping"
+                                       select c).FirstOrDefault();
+                        txtShippingAddress.Text = shipAdd.Address;
+                        txtShippingCity.Text = shipAdd.City;
+                        ddlShippingState.SelectedValue = shipAdd.State;
+                        txtShippingZip.Text = shipAdd.Zip.ToString();
+
                         txtEmail.Text = customer.email;
                         txtUsername.Text = customer.UserName;
 
