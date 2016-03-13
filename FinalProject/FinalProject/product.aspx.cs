@@ -27,8 +27,7 @@ namespace FinalProject
                     var currentProduct = (from c in content.Products
                                           where c.Id.ToString() == productId
                                           select c).FirstOrDefault();
-
-                    //ADD IMAGE HERE imgProductImage
+                    
                     imgProduct.ImageUrl = currentProduct.image;
                     lblProductName.Text = currentProduct.ProductName;
                     lblProductDescription.Text = currentProduct.ProductDescription;
@@ -129,26 +128,56 @@ namespace FinalProject
             cartId = Int32.Parse(Session["cartID"].ToString());
             using (StoreContent context = new StoreContent())
             {
+                int quantityToAdd;
+
                 var cart = (from c in context.Orders
                             where c.Id == cartId
                             select c).FirstOrDefault();
                 var item = (from p in context.Products
                             where p.Id == addId
                             select p).FirstOrDefault();
-                if (item != null)
+                var checkItem = (from c in context.OrderItem
+                                 where c.ProductID == item.Id && c.OrderID == cart.Id
+                                 select c).FirstOrDefault();
+
+                if (checkItem != null)
                 {
+                    checkItem.Quantity = checkItem.Quantity + Int32.Parse(ddlQuantity.SelectedValue);
+                    quantityToAdd = Int32.Parse(ddlQuantity.SelectedValue);
+                }
+                else
+                {
+                    
+
                     var orditem = new OrderItem();
                     orditem.CustomerID = custId;
                     orditem.OrderID = cartId;
                     orditem.ProductID = item.Id;
-                    orditem.Quantity = Int32.Parse(ddlQuantity.SelectedValue); //hard coded, can add function to add multiple items -------- RID: Changed it to allow quantity for the product detail page
+
+                    if (Int32.Parse(ddlQuantity.SelectedValue) > 1)
+                    {
+                        quantityToAdd = Int32.Parse(ddlQuantity.SelectedValue);
+                        orditem.Quantity = quantityToAdd;
+                    }
+                    else
+                    {
+                        quantityToAdd = 1;
+                        orditem.Quantity = Int32.Parse(ddlQuantity.SelectedValue);
+                    }
+
                     context.OrderItem.Add(orditem);
-                    if (cart != null)
-                        cart.SubTotal += Decimal.Parse((item.UnitPrice * Int32.Parse(ddlQuantity.SelectedValue)).ToString()); //Subtotal now reflects unit price * quantity of units  --RID
-                    item.Stock--;   //remove from stock
-                    context.SaveChanges();
                 }
+
+                if (cart != null)
+                {
+                    cart.SubTotal += Decimal.Parse((item.UnitPrice * Int32.Parse(ddlQuantity.SelectedValue)).ToString()); //Subtotal now reflects unit price * quantity of units  --RID
+                }
+                item.Stock = item.Stock - quantityToAdd;   //remove from stock
+                context.SaveChanges();
+                
             }
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
     }
 }

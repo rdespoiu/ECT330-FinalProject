@@ -138,7 +138,6 @@
     <Content Include="orders.aspx" />
     <Content Include="packages.config" />
     <Content Include="PopulateStoreData.aspx" />
-    <Content Include="ProcessCreditResult-DELETE.aspx" />
     <Content Include="ProcessCreditResult.aspx" />
     <Content Include="product.aspx" />
     <Content Include="ProductsMaster.Master" />
@@ -260,13 +259,6 @@
     </Compile>
     <Compile Include="PopulateStoreData.aspx.designer.cs">
       <DependentUpon>PopulateStoreData.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ProcessCreditResult-DELETE.aspx.cs">
-      <DependentUpon>ProcessCreditResult-DELETE.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProcessCreditResult-DELETE.aspx.designer.cs">
-      <DependentUpon>ProcessCreditResult-DELETE.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessCreditResult.aspx.cs">
       <DependentUpon>ProcessCreditResult.aspx</DependentUpon>

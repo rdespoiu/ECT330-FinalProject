@@ -28,7 +28,7 @@
         </div>
 
         <div id="orderDetailBottomRight">
-            <asp:Button ID="btnBack" runat="server" Text="Back to Orders" CssClass="backButton" />
+            <asp:Button ID="btnBack" runat="server" Text="Back to Orders" CssClass="backButton" OnClick="btnBack_Click" />
         </div>
     </div>
 </asp:Content>

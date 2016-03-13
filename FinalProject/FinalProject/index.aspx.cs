@@ -25,6 +25,7 @@ namespace FinalProject
             pnlSignIn.Visible = true;
             pnlSignedInOptions.Visible = false;
             updateUserName();
+            cartLabelQuantity();
         }
         
         protected void btnSignIn_Click(object sender, EventArgs e)
@@ -47,6 +48,7 @@ namespace FinalProject
 
                     instantiateCart(Int32.Parse(Session["LoggedInId"].ToString()));
 
+                    cartLabelQuantity();
 
                 }
                 else
@@ -124,6 +126,34 @@ namespace FinalProject
 
                     Session["cartID"] = newOrder.Id.ToString();
                     
+                }
+            }
+        }
+
+        protected void cartLabelQuantity()
+        {
+            if (Session["LoggedInId"] != null && Session["cartID"] != null)
+            {
+
+                int cartId = Int32.Parse(Session["cartID"].ToString());
+                int userId = Int32.Parse(Session["LoggedInId"].ToString());
+
+                using (StoreContent context = new StoreContent())
+                {
+                    var order = (from c in context.Orders
+                                 where c.Id == cartId && c.CustomerID == userId
+                                 select c).FirstOrDefault();
+
+                    var quantity = (from c in context.OrderItem
+                                    where c.OrderID == order.Id
+                                    select c).Count();
+
+                    if (order != null && quantity != null)
+                    {
+                        lblShoppingCart.Text = "Shopping Cart" + " (" + quantity.ToString() + ")";
+                    }
+                    
+                                 
                 }
             }
         }

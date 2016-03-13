@@ -82,7 +82,7 @@ namespace FinalProject
             }
 
             lblPageName.Text = "CHECKOUT SUCCESSFUL";
-            lblStatus.Text = "The transaction was approved. Your credit card will be charged $" + transactionAmount;
+            lblStatus.Text = "The transaction was approved. Your credit card will be charged $" + transactionAmount.ToString();
             lblShipping.Text = "Your order will be shipped by supersonic drone for free!";
             lblDelivery.Text = "Drone will depart in 15 minutes and arrive at your doorstep in " + randomDeliveryTime + " minutes!";
             lblWarning.Text = "Please watch the sky when opening your door, as Above Treeline accepts no liability for customers hit by flying boxes.";
@@ -173,6 +173,7 @@ namespace FinalProject
                             select c).FirstOrDefault();
 
                 order.OrderStatus = "Complete";
+                order.OrderDate = DateTime.Now;
 
                 Orders newOrder = context.Orders.Create();
 

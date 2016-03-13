@@ -19,7 +19,9 @@ namespace FinalProject
                 Response.Redirect("index.aspx");
             } else
             {
+                verifyUser();
                 populateData();
+
             }
 
             
@@ -41,6 +43,7 @@ namespace FinalProject
 
                 if (orderItems != null)
                 {
+
                     foreach (OrderItem item in orderItems)
                     {
 
@@ -63,9 +66,18 @@ namespace FinalProject
                         row.Cells.Add(cell);
 
                         cell = new TableCell();
-                        cell.Text = "$" + (product.UnitPrice * item.Quantity).ToString("N2") + " (" + product.UnitPrice.ToString("N2") + " ea)";
+
+                        if (item.Quantity > 1)
+                        {
+                            cell.Text = "$" + (product.UnitPrice * item.Quantity).ToString("N2") + " ($" + product.UnitPrice.ToString("N2") + " ea)";
+                        } else
+                        {
+                            cell.Text = "$" + product.UnitPrice.ToString("N2");
+                        }
+                        
                         row.Cells.Add(cell);
 
+                        tblOrderDetail.Rows.Add(row);
 
 
                         
@@ -77,6 +89,7 @@ namespace FinalProject
 
                     if (orderTotal != null)
                     {
+                        lblOrder.Text = "Order Date: " + orderTotal.OrderDate.ToString("MM/dd/yyyy");
                         lblTotal.Text = orderTotal.SubTotal.ToString("N2");
                     }
 
@@ -90,6 +103,38 @@ namespace FinalProject
 
 
 
+        }
+
+        protected void verifyUser()
+        {
+            using (StoreContent context = new StoreContent())
+            {
+                try {
+                    int userId = Int32.Parse(Session["LoggedInId"].ToString());
+                    int orderId = Int32.Parse(Request.QueryString["Id"].ToString());
+
+                    var order = (from c in context.Orders
+                                 where c.Id == orderId && c.CustomerID == userId
+                                 select c).FirstOrDefault();
+
+                    if (order == null)
+                    {
+                        Response.Redirect("index.aspx");
+                    }
+
+                } catch
+                {
+                    Response.Redirect("index.aspx");
+                }
+                
+
+
+            }
+        }
+
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("orders.aspx");
         }
     }
 }
