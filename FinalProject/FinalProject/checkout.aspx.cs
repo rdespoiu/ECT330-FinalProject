@@ -129,17 +129,25 @@ namespace FinalProject
                                 where c.Id == userId
                                 select c).FirstOrDefault();
 
+                    var shipAdd = (from c in context.Address
+                                   where c.UserName == user.UserName && c.typeAdd == "Shipping"
+                                   select c).FirstOrDefault();
+
+                    var billAdd = (from c in context.Address
+                                   where c.UserName == user.UserName && c.typeAdd == "Billing"
+                                   select c).FirstOrDefault();
+
                     if (user != null)
                     {
-                        lblShippingAddress.Text = user.ShippingAddress;
-                        lblShippingCity.Text = user.City;
-                        lblShippingState.Text = user.State;
-                        lblShippingZip.Text = user.Zip.ToString();
+                        lblShippingAddress.Text = shipAdd.Address;
+                        lblShippingCity.Text = shipAdd.City;
+                        lblShippingState.Text = shipAdd.State;
+                        lblShippingZip.Text = shipAdd.Zip.ToString();
 
-                        lblBillingAddress.Text = user.BillingAddress;
-                        lblBillingCity.Text = user.City;
-                        lblBillingState.Text = user.State;
-                        lblBillingZip.Text = user.Zip.ToString();
+                        lblBillingAddress.Text = billAdd.Address;
+                        lblBillingCity.Text = billAdd.City;
+                        lblBillingState.Text = billAdd.State;
+                        lblBillingZip.Text = billAdd.Zip.ToString();
                     }
                 }
             }

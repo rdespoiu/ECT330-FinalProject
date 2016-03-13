@@ -172,6 +172,10 @@ namespace FinalProject
                             where c.Id == userId
                             select c).FirstOrDefault();
 
+                var shipAdd = (from c in context.Address
+                               where c.UserName == user.UserName && c.typeAdd == "Shipping"
+                               select c).FirstOrDefault();
+                
                 order.OrderStatus = "Complete";
                 order.OrderDate = DateTime.Now;
 
@@ -180,7 +184,7 @@ namespace FinalProject
                 newOrder.CustomerID = userId;
                 newOrder.SubTotal = 0;
                 newOrder.OrderDate = DateTime.Now;
-                newOrder.ShippingAddress = user.ShippingAddress;
+                newOrder.ShippingAddress = shipAdd.Address;
                 newOrder.OrderStatus = "Active";
 
                 context.Orders.Add(newOrder);
