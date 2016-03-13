@@ -54,57 +54,17 @@ namespace FinalProject
                         cell = new TableCell();
                         cell.Text = order.OrderStatus;
                         row.Cells.Add(cell);
-
+                    
                         tblOrders.Rows.Add(row);
 
 
-                        /*
-                        var orderItems = from c in context.OrderItem
-                                         where c.OrderID == order.Id
-                                         select c;
-
-                        //Don't want to do nested for loops, runtime might get really bad for users with a lot of orders. Hopefully can find a better way to implement
-                        foreach (OrderItem orderItem in orderItems)
+                        for (int i = 0; i < 100; i++)
                         {
+                            System.Console.WriteLine("WE MADE IT HERE");
+                            System.Console.Write("WE MADE IT HERE");
 
-                            var productOrdered = (from c in context.Products
-                                                  where c.Id == orderItem.ProductID
-                                                  select c).FirstOrDefault();
-
-                            TableRow row = new TableRow();
-                            TableCell cell;
-                            HyperLink link;
-
-                            //Order Date
-                            cell = new TableCell();
-                            cell.Text = order.OrderDate.ToString();
-                            row.Cells.Add(cell);
-
-                            //Order Item
-                            cell = new TableCell();
-                            link = new HyperLink();
-                            link.Text = productOrdered.ProductName;
-                            link.NavigateUrl = "product.aspx?Id=" + productOrdered.Id.ToString();
-                            cell.Controls.Add(link);
-                            row.Cells.Add(cell);
-
-                            //Order Quantity
-                            cell = new TableCell();
-                            cell.Text = orderItem.Quantity.ToString();
-                            row.Cells.Add(cell);
-
-                            //Total
-                            cell = new TableCell();
-                            cell.Text = "$" + order.SubTotal.ToString();
-                            row.Cells.Add(cell);
-
-                            //Order Status
-                            cell = new TableCell();
-                            cell.Text = order.OrderStatus;
-                            row.Cells.Add(cell);
-
-                            tblOrders.Rows.Add(row);
-                        }*/
+                        }
+                        
                     }
                 } else
                 {

@@ -94,13 +94,13 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqShippingAddress;
         
         /// <summary>
-        /// txtCity control.
+        /// txtShippingCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCity;
+        protected global::System.Web.UI.WebControls.TextBox txtShippingCity;
         
         /// <summary>
         /// reqCity control.
@@ -112,13 +112,13 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqCity;
         
         /// <summary>
-        /// txtZip control.
+        /// txtShippingZip control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtZip;
+        protected global::System.Web.UI.WebControls.TextBox txtShippingZip;
         
         /// <summary>
         /// reqZip control.
@@ -139,13 +139,13 @@ namespace FinalProject {
         protected global::System.Web.UI.WebControls.CompareValidator cvZip;
         
         /// <summary>
-        /// ddlState control.
+        /// ddlShippingState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlState;
+        protected global::System.Web.UI.WebControls.DropDownList ddlShippingState;
         
         /// <summary>
         /// reqState control.

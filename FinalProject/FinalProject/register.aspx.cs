@@ -25,7 +25,7 @@ namespace FinalProject
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            /*
             if (Page.IsValid)
             {
 
@@ -76,7 +76,7 @@ namespace FinalProject
 
                     
                 }
-            }
+            }*/
         }
 
         protected void populateStates()
@@ -88,7 +88,7 @@ namespace FinalProject
                                 , "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"};
             foreach (String state in states)
             {
-                ddlState.Items.Add(new ListItem(state));
+                ddlShippingState.Items.Add(new ListItem(state));
             }
         }
     }

@@ -106,7 +106,7 @@ namespace FinalProject
                 AppTransAmount = totalPrice.ToString();
                 lblTotal.Text = "Total: $" + totalPrice.ToString("N2");
 
-                if (Int32.Parse(AppTransAmount) <= 0)
+                if (totalPrice <= 0)
                 {
                     Response.Redirect("index.aspx");
                 }

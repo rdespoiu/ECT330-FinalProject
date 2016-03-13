@@ -137,6 +137,7 @@ namespace FinalProject
         {
             if (Session["LoggedInId"] != null && Session["cartID"] != null)
             {
+                int CART_QUANTITY = 0;
 
                 int cartId = Int32.Parse(Session["cartID"].ToString());
                 int userId = Int32.Parse(Session["LoggedInId"].ToString());
@@ -147,15 +148,20 @@ namespace FinalProject
                                  where c.Id == cartId && c.CustomerID == userId
                                  select c).FirstOrDefault();
 
-                    var quantity = (from c in context.OrderItem
-                                    where c.OrderID == order.Id
-                                    select c).Count();
+                    var quantity = from c in context.OrderItem
+                                   where c.OrderID == order.Id
+                                   select c;
 
                     if (order != null && quantity != null)
                     {
-                        lblShoppingCart.Text = "Shopping Cart" + " (" + quantity.ToString() + ")";
-                    }
+                        foreach (OrderItem item in quantity)
+                        {
+                            CART_QUANTITY += item.Quantity;
 
+                            lblShoppingCart.Text = "Shopping Cart" + " (" + CART_QUANTITY.ToString() + ")";
+
+                        }
+                    }
 
                 }
             }

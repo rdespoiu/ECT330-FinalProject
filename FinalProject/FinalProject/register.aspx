@@ -30,20 +30,20 @@
                 <br />
                 <asp:RequiredFieldValidator ID="reqShippingAddress" runat="server" ErrorMessage="Shipping address is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingAddress" CssClass="registerText"></asp:RequiredFieldValidator>
                 <br />
-                <asp:TextBox ID ="txtCity" runat="server" Placeholder="City" CssClass="registerInput"></asp:TextBox>
+                <asp:TextBox ID ="txtShippingCity" runat="server" Placeholder="Shipping City" CssClass="registerInput"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="reqCity" runat="server" ErrorMessage="City is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtCity" CssClass="registerText"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="reqCity" runat="server" ErrorMessage="City is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingCity" CssClass="registerText"></asp:RequiredFieldValidator>
                 <br />
-                <asp:TextBox ID="txtZip" runat="server" Placeholder="Zip Code" CssClass="registerInput"></asp:TextBox>
+                <asp:TextBox ID="txtShippingZip" runat="server" Placeholder="Shipping Zip Code" CssClass="registerInput"></asp:TextBox>
                 <br />
-                <asp:RequiredFieldValidator ID="reqZip" runat="server" ErrorMessage="Zip code is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtZip" CssClass="registerText"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="cvZip" runat="server" ControlToValidate="txtZip" Type="Integer" Operator="DataTypeCheck" ErrorMessage="You must enter a valid zip code!" ForeColor="Red" CssClass="registerText"></asp:CompareValidator>
+                <asp:RequiredFieldValidator ID="reqZip" runat="server" ErrorMessage="Zip code is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingZip" CssClass="registerText"></asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="cvZip" runat="server" ControlToValidate="txtShippingZip" Type="Integer" Operator="DataTypeCheck" ErrorMessage="You must enter a valid zip code!" ForeColor="Red" CssClass="registerText"></asp:CompareValidator>
                 <br />
-                <asp:DropDownList ID="ddlState" runat="server" CssClass="registerInput">
+                <asp:DropDownList ID="ddlShippingState" runat="server" CssClass="registerInput">
                     <asp:ListItem Text="Select a State"></asp:ListItem>
                 </asp:DropDownList>
                 <br />
-                <asp:RequiredFieldValidator ID="reqState" runat="server" ControlToValidate="ddlState" InitialValue="Select a State" ErrorMessage="You must choose a state!" EnableClientScript="true" CssClass="registerText" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="reqState" runat="server" ControlToValidate="ddlShippingState" InitialValue="Select a State" ErrorMessage="You must choose a state!" EnableClientScript="true" CssClass="registerText" ForeColor="Red"></asp:RequiredFieldValidator>
             
             </div>
 
@@ -72,10 +72,7 @@
                 <asp:RequiredFieldValidator ID="reqPass2" runat="server" ErrorMessage="Please confirm your password!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtPass2" CssClass="registerText"></asp:RequiredFieldValidator>
                 <asp:CompareValidator ID="cvPasswords" runat="server" ErrorMessage="Your passwords do not match!" ControlToCompare="txtPass1" ControlToValidate="txtPass2" EnableClientScript="true" ForeColor="Red" CssClass="registerText"></asp:CompareValidator>
                 <br />
-                <asp:Label ID="lblNewsletter" runat="server" Text="Would you like to receive news and exclusive deals?" CssClass="registerText"></asp:Label>
-                <br />
-                <asp:CheckBox ID="chkNewsletter" runat="server" Checked="true" />
-                <asp:Label ID="lblYes" runat="server" Text="YES! Send me those deals!" CssClass="registerText"></asp:Label>
+                
             </div>
     </div>
     
@@ -94,7 +91,10 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="cphBottom" runat="server">
 
     <div id="bottomLeft">
-
+        <asp:Label ID="lblNewsletter" runat="server" Text="Would you like to receive news and exclusive deals?" CssClass="registerText"></asp:Label>
+        <br />
+        <asp:CheckBox ID="chkNewsletter" runat="server" Checked="true" />
+        <asp:Label ID="lblYes" runat="server" Text="YES! Send me those deals!" CssClass="registerText"></asp:Label>
     </div>
 
     <div id="bottomRight">
