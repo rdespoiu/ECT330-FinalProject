@@ -96,34 +96,33 @@ namespace FinalProject
                                 where c.Id == userId
                                 select c).FirstOrDefault();
 
+                var shipAdd = (from c in context.Address
+                               where c.UserName == txtUsername.Text && c.typeAdd == "Shipping"
+                               select c).FirstOrDefault();
+
+                var billAdd = (from c in context.Address
+                               where c.UserName == txtUsername.Text && c.typeAdd == "Billing"
+                               select c).FirstOrDefault();
+
                 if (customer != null)
                 {
                     if (!IsPostBack)
                     {
+                        /*
+                        I get an error when I uncomment this, but when its commented it works
+                        Also, im not sure what this is supposed to do
+
                         txtFirstName.Text = customer.FirstName;
                         txtLastName.Text = customer.LastName;
-
-                        //show billing address
-                        var billAdd = (from c in context.Address
-                                       where c.UserName == txtUsername.Text && c.typeAdd == "Billing"
-                                       select c).FirstOrDefault();
                         txtBillingAddress.Text = billAdd.Address;
-                        txtBillingCity.Text = billAdd.City;
-                        ddlBillingState.SelectedValue = billAdd.State;
-                        txtBillingZip.Text = billAdd.Zip.ToString();
-
-                        //show shipping address
-                        var shipAdd = (from c in context.Address
-                                       where c.UserName == txtUsername.Text && c.typeAdd == "Shipping"
-                                       select c).FirstOrDefault();
                         txtShippingAddress.Text = shipAdd.Address;
                         txtShippingCity.Text = shipAdd.City;
-                        ddlShippingState.SelectedValue = shipAdd.State;
                         txtShippingZip.Text = shipAdd.Zip.ToString();
-
+                        ddlShippingState.SelectedValue = shipAdd.State;
                         txtEmail.Text = customer.email;
                         txtUsername.Text = customer.UserName;
-
+                       */
+                        return; 
                     }
                 }
             }
@@ -141,6 +140,20 @@ namespace FinalProject
                 ddlShippingState.Items.Add(new ListItem(state));
                 ddlBillingState.Items.Add(new ListItem(state));
             }
+        }
+
+        protected void btnMakeEdits_Click(object sender, EventArgs e)
+        {
+            //for shipping
+      //      pnlShowShip.Visible = false;
+       //     pnlEditShip.Visible = true;
+        }
+
+        protected void btnEditBill_Click(object sender, EventArgs e)
+        {
+            //for billing
+   //         pnlShowBill.Visible = false;
+   //         pnlMakeEditBilling.Visible = true;
         }
     }
 }

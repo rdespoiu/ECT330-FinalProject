@@ -13,47 +13,48 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphTop" runat="server">
     <div id="registerContent">
             <div id="registerLeft">
-                <asp:TextBox ID="txtFirstName" runat="server" Placeholder="First Name" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqFirstName" runat="server" ErrorMessage="First name is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtFirstName" CssClass="registerText"></asp:RequiredFieldValidator>
-                <br />
-                <asp:TextBox ID="txtLastName" runat="server" Placeholder="Last Name" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqLastName" runat="server" ErrorMessage="Last name is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtLastName" CssClass="registerText"></asp:RequiredFieldValidator>
-                <br />
-                <asp:TextBox ID="txtShippingAddress" runat="server" Placeholder="Shipping Address" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqShippingAddress" runat="server" ErrorMessage="Shipping address is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingAddress" CssClass="registerText"></asp:RequiredFieldValidator>
-                <br />
-                <asp:TextBox ID ="txtShippingCity" runat="server" Placeholder="Shipping City" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqCity" runat="server" ErrorMessage="City is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingCity" CssClass="registerText"></asp:RequiredFieldValidator>
-                <br />
-                <asp:TextBox ID="txtShippingZip" runat="server" Placeholder="Shipping Zip Code" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqZip" runat="server" ErrorMessage="Zip code is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingZip" CssClass="registerText"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="cvZip" runat="server" ControlToValidate="txtShippingZip" Type="Integer" Operator="DataTypeCheck" ErrorMessage="You must enter a valid zip code!" ForeColor="Red" CssClass="registerText"></asp:CompareValidator>
-                <br />
-                <asp:DropDownList ID="ddlShippingState" runat="server" CssClass="registerInput">
-                    <asp:ListItem Text="Select a State"></asp:ListItem>
-                </asp:DropDownList>
-                <br />
-                <asp:RequiredFieldValidator ID="reqState" runat="server" ControlToValidate="ddlShippingState" InitialValue="Select a State" ErrorMessage="You must choose a state!" EnableClientScript="true" CssClass="registerText" ForeColor="Red"></asp:RequiredFieldValidator>
-                <br />
-                <asp:TextBox ID="txtUsername" runat="server" Placeholder="Choose a username" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqUsername" runat="server" ErrorMessage="Please enter a username!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtUsername" CssClass="registerText"></asp:RequiredFieldValidator>
-                <br />
-                <asp:TextBox ID="txtUsername2" runat="server" Placeholder="Confirm your username" CssClass="registerInput"></asp:TextBox>
-                <br />
-                <asp:RequiredFieldValidator ID="reqUsername2" runat="server" ErrorMessage="Please confirm your username" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtUsername2" CssClass="registerText"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="cvUsername" runat="server" ErrorMessage="Your usernames do not match!" ForeColor="Red" EnableClientScript="true" ControlToCompare="txtUsername" ControlToValidate="txtUsername2" CssClass="registerText"></asp:CompareValidator>
-                <br />
+                    <asp:TextBox ID="txtFirstName" runat="server" Placeholder="First Name" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqFirstName" runat="server" ErrorMessage="First name is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtFirstName" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:TextBox ID="txtLastName" runat="server" Placeholder="Last Name" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqLastName" runat="server" ErrorMessage="Last name is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtLastName" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:TextBox ID="txtShippingAddress" runat="server" Placeholder="Shipping Address" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqShippingAddress" runat="server" ErrorMessage="Shipping address is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingAddress" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:TextBox ID="txtShippingCity" runat="server" Placeholder="Shipping City" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqCity" runat="server" ErrorMessage="City is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingCity" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:TextBox ID="txtShippingZip" runat="server" Placeholder="Shipping Zip Code" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqZip" runat="server" ErrorMessage="Zip code is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtShippingZip" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cvZip" runat="server" ControlToValidate="txtShippingZip" Type="Integer" Operator="DataTypeCheck" ErrorMessage="You must enter a valid zip code!" ForeColor="Red" CssClass="registerText"></asp:CompareValidator>
+                    <br />
+                    <asp:DropDownList ID="ddlShippingState" runat="server" CssClass="registerInput">
+                        <asp:ListItem Text="Select a State"></asp:ListItem>
+                    </asp:DropDownList>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqState" runat="server" ControlToValidate="ddlShippingState" InitialValue="Select a State" ErrorMessage="You must choose a state!" EnableClientScript="true" CssClass="registerText" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:TextBox ID="txtUsername" runat="server" Placeholder="Choose a username" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqUsername" runat="server" ErrorMessage="Please enter a username!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtUsername" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:TextBox ID="txtUsername2" runat="server" Placeholder="Confirm your username" CssClass="registerInput"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="reqUsername2" runat="server" ErrorMessage="Please confirm your username" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtUsername2" CssClass="registerText"></asp:RequiredFieldValidator>
+                    <asp:CompareValidator ID="cvUsername" runat="server" ErrorMessage="Your usernames do not match!" ForeColor="Red" EnableClientScript="true" ControlToCompare="txtUsername" ControlToValidate="txtUsername2" CssClass="registerText"></asp:CompareValidator>
+                    <br />
+    
             </div>
 
 
     
-            <div id="registerRight">
+            <div id="registerRight">    
                 <asp:TextBox ID="txtEmail" runat="server" Placeholder="Email Address" CssClass="registerInput"></asp:TextBox>
                 <br />
                 <asp:RequiredFieldValidator ID="reqEmail" runat="server" ErrorMessage="Email is required!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtEmail" CssClass="registerText"></asp:RequiredFieldValidator>
@@ -89,7 +90,7 @@
                 <br />
                 <asp:RequiredFieldValidator ID="reqPass2" runat="server" ErrorMessage="Please confirm your password!" ForeColor="Red" EnableClientScript="true" ControlToValidate="txtPass2" CssClass="registerText"></asp:RequiredFieldValidator>
                 <asp:CompareValidator ID="cvPasswords" runat="server" ErrorMessage="Your passwords do not match!" ControlToCompare="txtPass1" ControlToValidate="txtPass2" EnableClientScript="true" ForeColor="Red" CssClass="registerText"></asp:CompareValidator>
-                
+
             </div>
     </div>
 </asp:Content>
