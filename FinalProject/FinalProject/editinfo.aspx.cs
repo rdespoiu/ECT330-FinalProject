@@ -108,20 +108,6 @@ namespace FinalProject
                 {
                     if (!IsPostBack)
                     {
-                        /*
-                        I get an error when I uncomment this, but when its commented it works
-                        Also, im not sure what this is supposed to do
-
-                        txtFirstName.Text = customer.FirstName;
-                        txtLastName.Text = customer.LastName;
-                        txtBillingAddress.Text = billAdd.Address;
-                        txtShippingAddress.Text = shipAdd.Address;
-                        txtShippingCity.Text = shipAdd.City;
-                        txtShippingZip.Text = shipAdd.Zip.ToString();
-                        ddlShippingState.SelectedValue = shipAdd.State;
-                        txtEmail.Text = customer.email;
-                        txtUsername.Text = customer.UserName;
-                       */
                         return; 
                     }
                 }
@@ -142,18 +128,6 @@ namespace FinalProject
             }
         }
 
-        protected void btnMakeEdits_Click(object sender, EventArgs e)
-        {
-            //for shipping
-      //      pnlShowShip.Visible = false;
-       //     pnlEditShip.Visible = true;
-        }
-
-        protected void btnEditBill_Click(object sender, EventArgs e)
-        {
-            //for billing
-   //         pnlShowBill.Visible = false;
-   //         pnlMakeEditBilling.Visible = true;
-        }
+        
     }
 }
