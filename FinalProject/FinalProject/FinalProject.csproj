@@ -155,7 +155,6 @@
     <Content Include="register.aspx" />
     <Content Include="Search.aspx" />
     <Content Include="transactiontest.aspx" />
-    <Content Include="twitterTest.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -311,13 +310,6 @@
     </Compile>
     <Compile Include="transactiontest.aspx.designer.cs">
       <DependentUpon>transactiontest.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="twitterTest.aspx.cs">
-      <DependentUpon>twitterTest.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="twitterTest.aspx.designer.cs">
-      <DependentUpon>twitterTest.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

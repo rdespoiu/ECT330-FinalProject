@@ -13,7 +13,7 @@
 
     <asp:CheckBox ID="chkJackets" runat="server" Checked="false" Text="Jackets" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
     <br />
-    <asp:CheckBox ID="chkShirts" runat="server" Checked="false" Text="Shirts" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
+    <asp:CheckBox ID="chkShirts" runat="server" Checked="false" Text="Shorts" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
     <br />
     <asp:CheckBox ID="chkPants" runat="server" Checked="false" Text="Pants" AutoPostBack="true" OnCheckedChanged="checkBoxChanged" />    
 </asp:Content>
